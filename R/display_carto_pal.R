@@ -19,6 +19,6 @@ display_carto_pal = function(n, name){
         }
         carto_type = rcartocolor::cartocolors[rcartocolor::cartocolors$Name == name, "Type"][[1]]
         image(1:n, 1, as.matrix(1:n), col = carto_pal(n, name),
-              xlab = paste(name, ":", carto_type),
-              ylab = " ", xaxt = "n", yaxt = "n", bty="n")
+              main = paste0(name, ": ", carto_type, " (", n ,")"),
+              xlab = " ", ylab = " ", xaxt = "n", yaxt = "n", bty="n")
 }
