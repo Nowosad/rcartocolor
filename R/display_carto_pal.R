@@ -7,15 +7,17 @@
 #'
 #' @return A character vector
 #'
+#' @importFrom graphics image
+#'
 #' @examples
 #' display_carto_pal(7, "Burg")
 #'
 #' @export
 display_carto_pal = function(n, name){
-        if(!(name %in% cartocolors$Name)){
+        if(!(name %in% rcartocolor::cartocolors$Name)){
                 stop(paste(name,"is not a valid palette name for color_pal\n"))
         }
-        carto_type = cartocolors[cartocolors$Name == name, "Type"][[1]]
+        carto_type = rcartocolor::cartocolors[rcartocolor::cartocolors$Name == name, "Type"][[1]]
         image(1:n, 1, as.matrix(1:n), col = carto_pal(n, name),
               xlab = paste(name, ":", carto_type),
               ylab = " ", xaxt = "n", yaxt = "n", bty="n")

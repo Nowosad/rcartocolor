@@ -12,10 +12,10 @@
 #'
 #' @export
 carto_pal = function(n, name){
-        if(!(name %in% cartocolors$Name)){
+        if(!(name %in% rcartocolor::cartocolors$Name)){
                 stop(paste(name,"is not a valid palette name for color_pal\n"))
         }
         coln = paste0("n", n)
-        cartocolors[cartocolors$Name == name, coln][[1]]
+        rcartocolor::cartocolors[rcartocolor::cartocolors$Name == name, coln][[1]]
 }
 
