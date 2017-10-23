@@ -3,7 +3,7 @@
 rcartocolor
 ===========
 
-The goal of rcartocolor is to ...
+The goal of rcartocolor is to provide color schemes for maps and other graphics designed by CARTO as described at <https://carto.com/carto-colors/>.
 
 Installation
 ------------
@@ -18,8 +18,19 @@ devtools::install_github("Nowosad/rcartocolor")
 Example
 -------
 
-This is a basic example which shows you how to solve a common problem:
+Display a CARTOcolor palette:
 
 ``` r
-## basic example code
+library(rcartocolor)
+display_carto_pal(7, "Vivid")
+```
+
+![](README-example-1.png)
+
+Create a CARTOcolor palette:
+
+``` r
+my_colors = carto_pal(7, "Burg")
+my_colors
+#> [1] "#ffc6c4" "#f4a3a8" "#e38191" "#cc607d" "#ad466c" "#8b3058" "#672044"
 ```
