@@ -1,12 +1,13 @@
 Package: rcartocolor
 Title: CARTOColors Palettes
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: person("Jakub", "Nowosad", email = "nowosad.jakub@gmail.com", role = c("aut", "cre"))
 Description:  Provides color schemes for maps and other graphics
-        designed by CARTO as described at https://carto.com/carto-colors/
+        designed by CARTO as described at https://carto.com/carto-colors/.
 Depends: R (>= 3.4.1)
 URL: https://github.com/Nowosad/rcartocolor 
 BugReports: https://github.com/Nowosad/rcartocolor/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
