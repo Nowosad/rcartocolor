@@ -3,12 +3,12 @@
 rcartocolor
 ===========
 
-The goal of rcartocolor is to provide color schemes for maps and other graphics designed by CARTO as described at <https://carto.com/carto-colors/>.
+The goal of `rcartocolor` is to provide color schemes for maps and other graphics designed by [CARTO](https://carto.com/) as described at <https://carto.com/carto-colors/>.
 
 Installation
 ------------
 
-You can install rcartocolor from github with:
+You can install `rcartocolor` from github with:
 
 ``` r
 # install.packages("devtools")
