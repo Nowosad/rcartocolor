@@ -15,7 +15,13 @@ carto_pal = function(n, name){
         if(!(name %in% rcartocolor::cartocolors$Name)){
                 stop(paste(name,"is not a valid palette name for color_pal\n"))
         }
+        selected_metadata = rcartocolor::metacartocolors[rcartocolor::metacartocolors$Name == name, ]
+        min_n = selected_metadata$Min_n
+        max_n = selected_metadata$Max_n
+        if(!(n %in% min_n:max_n)){
+                stop(paste("Number of colors (n) in the", name,
+                           "palette should be between", min_n, "and", max_n, "\n"))
+        }
         coln = paste0("n", n)
         rcartocolor::cartocolors[rcartocolor::cartocolors$Name == name, coln][[1]]
 }
-
