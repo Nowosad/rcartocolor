@@ -1,4 +1,4 @@
-#' CARTOcolor palettes viewer
+#' CARTOcolor palette viewer
 #'
 #' Displays a color palette from CARTOcolor
 #'
