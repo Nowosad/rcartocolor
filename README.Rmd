@@ -42,3 +42,10 @@ Create a CARTOcolor palette:
 my_colors = carto_pal(7, "Burg")
 my_colors
 ```
+
+All of the CARTOcolor palettes:
+
+```{r example3, fig.height=8, fig.width=7}
+display_carto_all()
+```
+

@@ -36,3 +36,11 @@ my_colors = carto_pal(7, "Burg")
 my_colors
 #> [1] "#ffc6c4" "#f4a3a8" "#e38191" "#cc607d" "#ad466c" "#8b3058" "#672044"
 ```
+
+All of the CARTOcolor palettes:
+
+``` r
+display_carto_all()
+```
+
+![](README-example3-1.png)

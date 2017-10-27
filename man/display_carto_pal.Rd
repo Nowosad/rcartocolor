@@ -2,7 +2,7 @@
 % Please edit documentation in R/display_carto_pal.R
 \name{display_carto_pal}
 \alias{display_carto_pal}
-\title{CARTOcolor palettes viewer}
+\title{CARTOcolor palette viewer}
 \usage{
 display_carto_pal(n, name)
 }
