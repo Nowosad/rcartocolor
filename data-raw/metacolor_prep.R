@@ -3,7 +3,7 @@ library(tidyverse)
 
 metacartocolors = cartocolors %>%
         # select(-Type) %>%
-        gather(key, value, n2:n11) %>%
+        gather(key, value, n2:n12) %>%
         mutate(key = as.numeric(gsub("n", "", key))) %>%
         filter(!map_lgl(value, is.null)) %>%
         group_by(Name, Type) %>%
