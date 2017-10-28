@@ -21,8 +21,8 @@ cartocolors_qual = cartocolors %>%
         set_names(c("Name", "Type", paste0("n", 3:12)))
 
 cartocolors = cartocolors_no_qual %>%
-        bind_rows(cartocolors_qual)
-
+        bind_rows(cartocolors_qual) %>%
+        arrange(Type, desc(Name))
 
 # save data
 devtools::use_data(cartocolors, overwrite = TRUE)

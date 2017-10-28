@@ -11,11 +11,13 @@ test_that("palette generation is accurate", {
         expect_equal(carto_pal(2, name = "Burg"), c("#ffc6c4", "#672044"))
 
         # bad inputs
-        expect_error(carto_pal(2, name = "PurpOr"))
-        expect_error(carto_pal(12, name = "Burg"))
         expect_error(carto_pal(name = "Burg"))
         expect_error(carto_pal("New name"))
         expect_error(carto_pal(6, "New name"))
         expect_error(carto_pal(1))
+
+        # warnings
+        expect_warning(carto_pal(2, name = "PurpOr"))
+        expect_warning(carto_pal(12, name = "Burg"))
 
 })
