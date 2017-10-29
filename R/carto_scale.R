@@ -21,7 +21,7 @@
 scale_color_carto_c = function(..., type = "quantitative", palette = 1, direction = 1) {
         continuous_scale("colour",
                          "carto",
-                         gradient_n_pal(colours = carto_pal(NULL, carto_pal_name(palette, type))),
+                         gradient_n_pal(carto_pal_scale(type, palette, direction)(7)),
                          ...)
 }
 
@@ -50,7 +50,7 @@ scale_colour_carto_d = scale_color_carto_d
 scale_fill_carto_c = function(..., type = "quantitative", palette = 1, direction = 1) {
         continuous_scale("fill",
                          "carto",
-                         gradient_n_pal(colours = carto_pal(NULL, carto_pal_name(palette, type))),
+                         gradient_n_pal(carto_pal_scale(type, palette, direction)(7)),
                          ...)
 }
 
@@ -97,6 +97,5 @@ carto_pal_name = function(palette, type) {
         }
 
         type = match.arg(type, unique(rcartocolor::cartocolors$Type))
-
         rcartocolor::cartocolors$Name[rcartocolor::cartocolors$Type == type][palette]
 }
