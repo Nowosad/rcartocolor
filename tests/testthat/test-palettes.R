@@ -12,7 +12,6 @@ test_that("palette generation is accurate", {
         expect_equal(carto_pal(7, "Burg"), carto_pal(name = "Burg"))
 
         # bad inputs
-        expect_error(carto_pal(name = "Burg"))
         expect_error(carto_pal("New name"))
         expect_error(carto_pal(6, "New name"))
         expect_error(carto_pal(1))

@@ -21,7 +21,6 @@ test_that("visual elements are correct", {
 
         library(ggplot2)
         library(MASS)
-        # library(gridExtra)
 
         data("geyser", package="MASS")
 
@@ -31,15 +30,15 @@ test_that("visual elements are correct", {
                 theme_bw() +
                 theme(panel.grid = element_blank())
 
-        A = gg + scale_fill_carto_c() + labs(x="C: default", y=NULL)
-        B = gg + scale_fill_carto_c(palette = 4) + labs(x="C: 4", y=NULL)
-        C = gg + scale_fill_carto_c(palette = "BluGrn") + labs(x="C: BluGrn", y=NULL)
-        D = gg + scale_fill_carto_c(palette = 9, direction = 1) + labs(x="C: rev9", y=NULL)
+        A1 = gg + scale_fill_carto_c() + labs(x="C: default", y=NULL)
+        B1 = gg + scale_fill_carto_c(palette = 4) + labs(x="C: 4", y=NULL)
+        C1 = gg + scale_fill_carto_c(palette = "BluGrn") + labs(x="C: BluGrn", y=NULL)
+        D1 = gg + scale_fill_carto_c(palette = 9, direction = 1) + labs(x="C: rev9", y=NULL)
 
-        vdiffr::expect_doppelganger("a", A)
-        vdiffr::expect_doppelganger("b", B)
-        vdiffr::expect_doppelganger("c", C)
-        vdiffr::expect_doppelganger("d", D)
+        vdiffr::expect_doppelganger("a1", A1)
+        vdiffr::expect_doppelganger("b1", B1)
+        vdiffr::expect_doppelganger("c1", C1)
+        vdiffr::expect_doppelganger("d1", D1)
 
 })
 
@@ -49,22 +48,20 @@ test_that("visual elements are correct", {
         skip_on_cran()
 
         library(ggplot2)
-        # library(MASS)
-        # library(gridExtra)
 
         data("msleep", package="ggplot2")
 
         gg = ggplot(msleep, aes(vore, sleep_total, fill = vore)) +
                 geom_boxplot()
 
-        A = gg + scale_fill_carto_d() + labs(x="D: default", y=NULL)
-        B = gg + scale_fill_carto_d(palette = 4) + labs(x="D: 4", y=NULL)
-        C = gg + scale_fill_carto_d(palette = "Safe") + labs(x="D: Safe", y=NULL)
-        D = gg + scale_fill_carto_d(palette = 6, direction = 1) + labs(x="D: rev6", y=NULL)
+        A2 = gg + scale_fill_carto_d() + labs(x="D: default", y=NULL)
+        B2 = gg + scale_fill_carto_d(palette = 4) + labs(x="D: 4", y=NULL)
+        C2 = gg + scale_fill_carto_d(palette = "Safe") + labs(x="D: Safe", y=NULL)
+        D2 = gg + scale_fill_carto_d(palette = 6, direction = 1) + labs(x="D: rev6", y=NULL)
 
-        vdiffr::expect_doppelganger("a", A)
-        vdiffr::expect_doppelganger("b", B)
-        vdiffr::expect_doppelganger("c", C)
-        vdiffr::expect_doppelganger("d", D)
+        vdiffr::expect_doppelganger("a2", A2)
+        vdiffr::expect_doppelganger("b2", B2)
+        vdiffr::expect_doppelganger("c2", C2)
+        vdiffr::expect_doppelganger("d2", D2)
 
 })
