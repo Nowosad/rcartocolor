@@ -11,7 +11,7 @@
 #' my_colors = carto_pal(7, "Burg")
 #'
 #' @export
-carto_pal = function(n, name){
+carto_pal = function(n = NULL, name){
         if(!(name %in% rcartocolor::cartocolors$Name)){
                 stop(paste(name,"is not a valid palette name for color_pal\n"))
         }
