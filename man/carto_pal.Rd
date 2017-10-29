@@ -4,7 +4,7 @@
 \alias{carto_pal}
 \title{CARTOcolor palettes}
 \usage{
-carto_pal(n, name)
+carto_pal(n = NULL, name)
 }
 \arguments{
 \item{n}{Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)}
