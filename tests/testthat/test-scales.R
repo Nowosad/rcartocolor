@@ -12,6 +12,11 @@ test_that("scales work correctly", {
 
         color_scale = scale_color_carto_d()
         expect_equal(color_scale$is_discrete(), TRUE)
+
+        expect_silent(rcartocolor:::carto_pal_scale()(1))
+
+        expect_warning(rcartocolor:::carto_pal_scale(palette = "Best")(6))
+
 })
 
 context("colorandfill_c")
