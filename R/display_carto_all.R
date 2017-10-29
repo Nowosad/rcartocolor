@@ -18,14 +18,12 @@
 #'
 #' @export
 display_carto_all = function(n = NULL, type = "all"){
-        if (!(type %in% c("quantitative", "diverging", "qualitative", "aggregation", "all"))) {
-                stop(paste(type, "is not a valid name for a color type\n"))
-        }
-
         if(any(type == "all")){
                 selected_type = rcartocolor::cartocolors
-        } else{
+        } else if (any(type %in% c("quantitative", "diverging", "qualitative", "aggregation"))){
                 selected_type = rcartocolor::cartocolors[rcartocolor::cartocolors$Type %in% type, ]
+        } else{
+                stop(paste(type, "is not a valid name for a color type\n"))
         }
         selected_metadata = rcartocolor::metacartocolors[rcartocolor::metacartocolors$Name %in% selected_type$Name, ]
         n_colors = nrow(selected_metadata)
