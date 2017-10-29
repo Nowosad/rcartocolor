@@ -1,6 +1,8 @@
 context("display_pal")
 test_that("palette display", {
 
+        expect_silent(display_carto_all(n = NULL))
+
         # bad inputs
         expect_error(display_carto_pal("New name"))
         expect_error(display_carto_pal(6, "New name"))
