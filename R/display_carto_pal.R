@@ -13,7 +13,7 @@
 #' display_carto_pal(7, "Burg")
 #'
 #' @export
-display_carto_pal = function(n, name){
+display_carto_pal = function(n = NULL, name){
         selected_colors = carto_pal(n, name)
         selected_type = rcartocolor::cartocolors[rcartocolor::cartocolors$Name == name, "Type"][[1]]
         image(1:n, 1, as.matrix(1:n), col = selected_colors,

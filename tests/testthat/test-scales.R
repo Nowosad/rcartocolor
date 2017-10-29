@@ -26,14 +26,14 @@ test_that("visual elements are correct", {
 
         gg = ggplot(geyser, aes(x = duration, y = waiting)) +
                 xlim(0.5, 6) + ylim(40, 110) +
-                stat_density2d(aes(fill = ..level..), geom="polygon") +
+                stat_density2d(aes(fill = ..level..), geom = "polygon") +
                 theme_bw() +
                 theme(panel.grid = element_blank())
 
-        A1 = gg + scale_fill_carto_c() + labs(x="C: default", y=NULL)
-        B1 = gg + scale_fill_carto_c(palette = 4) + labs(x="C: 4", y=NULL)
-        C1 = gg + scale_fill_carto_c(palette = "BluGrn") + labs(x="C: BluGrn", y=NULL)
-        D1 = gg + scale_fill_carto_c(palette = 9, direction = 1) + labs(x="C: rev9", y=NULL)
+        A1 = gg + scale_fill_carto_c() + labs(x = "C: default", y = NULL)
+        B1 = gg + scale_fill_carto_c(palette = 4) + labs(x = "C: 4", y = NULL)
+        C1 = gg + scale_fill_carto_c(palette = "BluGrn") + labs(x = "C: BluGrn", y = NULL)
+        D1 = gg + scale_fill_carto_c(palette = 9, direction = 1) + labs(x = "C: rev9", y = NULL)
 
         vdiffr::expect_doppelganger("a1", A1)
         vdiffr::expect_doppelganger("b1", B1)
@@ -54,10 +54,10 @@ test_that("visual elements are correct", {
         gg = ggplot(msleep, aes(vore, sleep_total, fill = vore)) +
                 geom_boxplot()
 
-        A2 = gg + scale_fill_carto_d() + labs(x="D: default", y=NULL)
-        B2 = gg + scale_fill_carto_d(palette = 4) + labs(x="D: 4", y=NULL)
-        C2 = gg + scale_fill_carto_d(palette = "Safe") + labs(x="D: Safe", y=NULL)
-        D2 = gg + scale_fill_carto_d(palette = 6, direction = 1) + labs(x="D: rev6", y=NULL)
+        A2 = gg + scale_fill_carto_d() + labs(x = "D: default", y = NULL)
+        B2 = gg + scale_fill_carto_d(palette = 4) + labs(x = "D: 4", y = NULL)
+        C2 = gg + scale_fill_carto_d(palette = "Safe") + labs(x = "D: Safe", y = NULL)
+        D2 = gg + scale_fill_carto_d(palette = 6, direction = 1) + labs(x = "D: rev6", y = NULL)
 
         vdiffr::expect_doppelganger("a2", A2)
         vdiffr::expect_doppelganger("b2", B2)

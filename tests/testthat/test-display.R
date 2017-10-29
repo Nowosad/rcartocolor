@@ -1,4 +1,18 @@
 context("display_pal")
+test_that("palette display", {
+
+        # bad inputs
+        expect_error(display_carto_pal("New name"))
+        expect_error(display_carto_pal(6, "New name"))
+        expect_error(display_carto_pal(1))
+
+        # warnings
+        expect_warning(display_carto_pal(2, name = "PurpOr"))
+        expect_warning(display_carto_pal(12, name = "Burg"))
+
+})
+
+context("display_pal")
 test_that("visual elements are correct", {
 
         skip_on_cran()
@@ -12,6 +26,18 @@ test_that("visual elements are correct", {
         vdiffr::expect_doppelganger("b3", B3)
         vdiffr::expect_doppelganger("c3", C3)
         vdiffr::expect_doppelganger("d3", D3)
+
+})
+
+context("display_carto_all")
+test_that("palette display", {
+
+        # bad inputs
+        expect_error(display_carto_all(type = "Qual"))
+
+        # warnings
+        expect_warning(display_carto_all(n = 77))
+        expect_warning(display_carto_all(n = 1))
 
 })
 
