@@ -2,6 +2,8 @@ context("display_pal")
 test_that("palette display", {
 
         expect_silent(display_carto_all(n = NULL))
+        expect_silent(display_carto_all(type = "diverging"))
+        expect_silent(display_carto_all(type = c("diverging", "aggregation")))
 
         # bad inputs
         expect_error(display_carto_pal("New name"))
