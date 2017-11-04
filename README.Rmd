@@ -8,7 +8,7 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "README-"
+  fig.path = "man/figures/README-"
 )
 ```
 
@@ -28,7 +28,7 @@ You can install `rcartocolor` from github with:
 devtools::install_github("Nowosad/rcartocolor")
 ```
 
-## Example
+## Examples
 
 Display a CARTOcolor palette:
 
@@ -44,9 +44,31 @@ my_colors = carto_pal(7, "Burg")
 my_colors
 ```
 
-All of the CARTOcolor palettes:
+Display all of the CARTOcolor palettes:
 
 ```{r example3, fig.height=8, fig.width=7}
 display_carto_all()
 ```
+
+```{r examplegg1}
+library(sf)
+library(spData)
+library(ggplot2)
+ggplot(world, aes(fill = lifeExp)) +
+        geom_sf(data = world) +
+        coord_sf(crs = "+proj=robin") +
+        scale_fill_carto_c(type = "diverging", palette = "Fall") +
+        theme_void()
+```
+
+
+```{r examplegg2}
+ggplot(world, aes(fill = region_un)) +
+        geom_sf(data = world) +
+        coord_sf(crs = "+proj=robin")  +
+        scale_fill_carto_d(name = "Region: ", palette = "Prism") +
+        theme_void()
+```
+
+
 

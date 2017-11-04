@@ -17,8 +17,8 @@ You can install `rcartocolor` from github with:
 devtools::install_github("Nowosad/rcartocolor")
 ```
 
-Example
--------
+Examples
+--------
 
 Display a CARTOcolor palette:
 
@@ -27,7 +27,7 @@ library(rcartocolor)
 display_carto_pal(7, "Vivid")
 ```
 
-![](README-example-1.png)
+![](man/figures/README-example-1.png)
 
 Create a CARTOcolor palette:
 
@@ -37,10 +37,34 @@ my_colors
 #> [1] "#ffc6c4" "#f4a3a8" "#e38191" "#cc607d" "#ad466c" "#8b3058" "#672044"
 ```
 
-All of the CARTOcolor palettes:
+Display all of the CARTOcolor palettes:
 
 ``` r
 display_carto_all()
 ```
 
-![](README-example3-1.png)
+![](man/figures/README-example3-1.png)
+
+``` r
+library(sf)
+#> Linking to GEOS 3.5.0, GDAL 2.1.2, proj.4 4.9.2
+library(spData)
+library(ggplot2)
+ggplot(world, aes(fill = lifeExp)) +
+        geom_sf(data = world) +
+        coord_sf(crs = "+proj=robin") +
+        scale_fill_carto_c(type = "diverging", palette = "Fall") +
+        theme_void()
+```
+
+![](man/figures/README-examplegg1-1.png)
+
+``` r
+ggplot(world, aes(fill = region_un)) +
+        geom_sf(data = world) +
+        coord_sf(crs = "+proj=robin")  +
+        scale_fill_carto_d(name = "Region: ", palette = "Prism") +
+        theme_void()
+```
+
+![](man/figures/README-examplegg2-1.png)
