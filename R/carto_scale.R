@@ -7,8 +7,8 @@
 #'   colors are as output by [carto_pal()]. If -1, the
 #'   order of colors is reversed
 #' @inheritParams scales::gradient_n_pal
-#' @inheritParams continuous_scale
-#' @inheritParams discrete_scale
+#' @inheritParams ggplot2::continuous_scale
+#' @inheritParams ggplot2::discrete_scale
 #' @param ... Other arguments passed on to [discrete_scale()] or
 #' [continuous_scale()] to control name, limits, breaks, labels and so forth
 #'
@@ -18,19 +18,26 @@
 #' @rdname carto_scale
 #' @export
 #'
-scale_color_carto_c = function(..., type = "quantitative", palette = 1, direction = 1) {
+scale_color_carto_c = function(..., type = "quantitative",
+                               palette = 1, direction = 1,
+                               na.value = "#e9e9e9", guide = "colourbar") {
         continuous_scale("colour",
-                         "carto",
+                         "carto_c",
                          gradient_n_pal(carto_pal_scale(type, palette, direction)(7)),
+                         na.value = na.value,
+                         guide = guide,
                          ...)
 }
 
 #' @rdname carto_scale
 #' @export
-scale_color_carto_d = function(..., type = "qualitative", palette = 1, direction = 1) {
+scale_color_carto_d = function(..., type = "qualitative",
+                               palette = 1, direction = 1,
+                               na.value	= "#e9e9e9") {
         discrete_scale("colour",
-                       "carto",
+                       "carto_d",
                        carto_pal_scale(type, palette, direction),
+                       na.value	= na.value,
                        ...)
 }
 
@@ -47,19 +54,26 @@ scale_colour_carto_d = scale_color_carto_d
 
 #' @rdname carto_scale
 #' @export
-scale_fill_carto_c = function(..., type = "quantitative", palette = 1, direction = 1) {
+scale_fill_carto_c = function(..., type = "quantitative",
+                              palette = 1, direction = 1,
+                              na.value = "#e9e9e9", guide = "colourbar") {
         continuous_scale("fill",
-                         "carto",
+                         "carto_c",
                          gradient_n_pal(carto_pal_scale(type, palette, direction)(7)),
+                         na.value = na.value,
+                         guide = guide,
                          ...)
 }
 
 #' @rdname carto_scale
 #' @export
-scale_fill_carto_d = function(..., type = "qualitative", palette = 1, direction = 1) {
+scale_fill_carto_d = function(..., type = "qualitative",
+                              palette = 1, direction = 1,
+                              na.value	= "#e9e9e9") {
         discrete_scale("fill",
-                       "carto",
+                       "carto_d",
                        carto_pal_scale(type, palette, direction),
+                       na.value	= na.value,
                        ...)
 }
 

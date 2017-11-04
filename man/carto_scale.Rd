@@ -12,19 +12,22 @@
 \title{CARTO color scales}
 \usage{
 scale_color_carto_c(..., type = "quantitative", palette = 1,
-  direction = 1)
+  direction = 1, na.value = "#e9e9e9", guide = "colourbar")
 
-scale_color_carto_d(..., type = "qualitative", palette = 1, direction = 1)
+scale_color_carto_d(..., type = "qualitative", palette = 1, direction = 1,
+  na.value = "#e9e9e9")
 
 scale_colour_carto_c(..., type = "quantitative", palette = 1,
-  direction = 1)
+  direction = 1, na.value = "#e9e9e9", guide = "colourbar")
 
 scale_colour_carto_d(..., type = "qualitative", palette = 1,
-  direction = 1)
+  direction = 1, na.value = "#e9e9e9")
 
-scale_fill_carto_c(..., type = "quantitative", palette = 1, direction = 1)
+scale_fill_carto_c(..., type = "quantitative", palette = 1, direction = 1,
+  na.value = "#e9e9e9", guide = "colourbar")
 
-scale_fill_carto_d(..., type = "qualitative", palette = 1, direction = 1)
+scale_fill_carto_d(..., type = "qualitative", palette = 1, direction = 1,
+  na.value = "#e9e9e9")
 }
 \arguments{
 \item{...}{Other arguments passed on to \code{\link[=discrete_scale]{discrete_scale()}} or
@@ -38,6 +41,11 @@ index into the list of palettes of appropriate \code{type}}
 \item{direction}{Sets the order of colors in the scale. If 1, the default,
 colors are as output by \code{\link[=carto_pal]{carto_pal()}}. If -1, the
 order of colors is reversed}
+
+\item{na.value}{Missing values will be replaced with this value.}
+
+\item{guide}{A function used to create a guide or its name. See
+\code{\link[=guides]{guides()}} for more info.}
 }
 \description{
 CARTO color scales
