@@ -53,7 +53,8 @@ library(ggplot2)
 ggplot(world, aes(fill = lifeExp)) +
         geom_sf(data = world) +
         coord_sf(crs = "+proj=robin") +
-        scale_fill_carto_c(type = "diverging", palette = "Fall") +
+        scale_fill_carto_c(name = "Life expectancy: ",
+                           type = "diverging", palette = "Fall") +
         theme_void()
 ```
 
