@@ -16,6 +16,7 @@
 #' @importFrom scales gradient_n_pal
 #'
 #' @examples
+#' \dontrun{
 #' library(sf)
 #' library(spData)
 #' library(ggplot2)
@@ -31,7 +32,7 @@
 #'         coord_sf(crs = "+proj=robin")  +
 #'         scale_fill_carto_d(name = "Region: ", palette = "Prism") +
 #'         theme_void()
-#'
+#' }
 #' @rdname carto_scale
 #' @export
 #'
