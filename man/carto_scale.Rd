@@ -50,3 +50,21 @@ order of colors is reversed}
 \description{
 CARTO color scales
 }
+\examples{
+library(sf)
+library(spData)
+library(ggplot2)
+ggplot(world, aes(fill = lifeExp)) +
+        geom_sf(data = world) +
+        coord_sf(crs = "+proj=robin") +
+        scale_fill_carto_c(name = "Life expectancy: ",
+                           type = "diverging", palette = "Fall") +
+        theme_void()
+
+ggplot(world, aes(fill = region_un)) +
+        geom_sf(data = world) +
+        coord_sf(crs = "+proj=robin")  +
+        scale_fill_carto_d(name = "Region: ", palette = "Prism") +
+        theme_void()
+
+}
