@@ -11,7 +11,7 @@ before_install:
 
 r_packages:
   - covr
-  -sf
+  - sf
 
 after_success:
   - Rscript -e 'library(covr); codecov()'
