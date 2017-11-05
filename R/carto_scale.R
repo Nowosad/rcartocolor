@@ -17,6 +17,7 @@
 #'
 #' @examples
 #' \dontrun{
+#' # devtools::install_github("tidyverse/ggplot2")
 #' library(sf)
 #' library(spData)
 #' library(ggplot2)
