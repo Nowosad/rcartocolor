@@ -4,7 +4,7 @@ Version: 0.0.20
 Authors@R: person("Jakub", "Nowosad", email = "nowosad.jakub@gmail.com", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-1057-3721"))
 Description: Provides color schemes for maps and other graphics
-        designed by CARTO as described at <https://carto.com/carto-colors/>.
+        designed by 'CARTO' as described at <https://carto.com/carto-colors/>.
         It includes four types of palettes: aggregation, diverging, qualitative, 
         and quantitative.
 Depends: R (>= 3.4.1)

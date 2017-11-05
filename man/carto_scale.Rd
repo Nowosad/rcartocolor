@@ -51,6 +51,8 @@ order of colors is reversed}
 CARTO color scales
 }
 \examples{
+\dontrun{
+# devtools::install_github("tidyverse/ggplot2")
 library(sf)
 library(spData)
 library(ggplot2)
@@ -66,5 +68,5 @@ ggplot(world, aes(fill = region_un)) +
         coord_sf(crs = "+proj=robin")  +
         scale_fill_carto_d(name = "Region: ", palette = "Prism") +
         theme_void()
-
+}
 }
