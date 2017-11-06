@@ -3,7 +3,7 @@
 rcartocolor
 ===========
 
-[![Build Status](https://travis-ci.org/Nowosad/rcartocolor.png?branch=master)](https://travis-ci.org/Nowosad/rcartocolor) [![codecov](https://codecov.io/gh/Nowosad/rcartocolor/branch/master/graph/badge.svg)](https://codecov.io/gh/Nowosad/rcartocolor)
+[![Build Status](https://travis-ci.org/Nowosad/rcartocolor.png?branch=master)](https://travis-ci.org/Nowosad/rcartocolor) [![codecov](https://codecov.io/gh/Nowosad/rcartocolor/branch/master/graph/badge.svg)](https://codecov.io/gh/Nowosad/rcartocolor) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rcartocolor)](https://cran.r-project.org/package=rcartocolor) [![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
 
 The goal of `rcartocolor` is to provide color schemes for maps and other graphics designed by [CARTO](https://carto.com/) as described at <https://carto.com/carto-colors/>.
 
