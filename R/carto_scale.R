@@ -25,7 +25,7 @@
 #'         geom_sf(data = world) +
 #'         coord_sf(crs = "+proj=robin") +
 #'         scale_fill_carto_c(name = "Life expectancy: ",
-#'                            type = "diverging", palette = "Fall") +
+#'                            type = "diverging", palette = "Fall", direction = -1) +
 #'         theme_void()
 #'
 #' ggplot(world, aes(fill = region_un)) +
