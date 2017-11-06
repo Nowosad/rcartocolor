@@ -1,6 +1,6 @@
 Package: rcartocolor
-Title: CARTOColors Palettes
-Version: 0.0.20
+Title: 'CARTOColors' Palettes
+Version: 0.0.21
 Authors@R: person("Jakub", "Nowosad", email = "nowosad.jakub@gmail.com", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-1057-3721"))
 Description: Provides color schemes for maps and other graphics
