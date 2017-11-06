@@ -10,7 +10,13 @@ The goal of `rcartocolor` is to provide color schemes for maps and other graphic
 Installation
 ------------
 
-You can install `rcartocolor` from github with:
+Get the released version from CRAN:
+
+``` r
+install.packages("rcartocolor")
+```
+
+Get the development version from github:
 
 ``` r
 # install.packages("devtools")
