@@ -8,7 +8,8 @@ output: github_document
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
-  fig.path = "man/figures/README-"
+  fig.path = "man/figures/README-",
+  fig.height = 4
 )
 ```
 
@@ -58,7 +59,12 @@ Display all of the CARTOcolor palettes:
 display_carto_all()
 ```
 
+### **ggplot2**
+
+The **rcartocolor** package contains four **ggplot2** color scales: two for continuous data - `scale_fill_carto_c`, `scale_color_carto_c` and two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:
+
 ```{r examplegg1}
+# devtools::install_github("tidyverse/ggplot2")
 library(sf)
 library(spData)
 library(ggplot2)
@@ -79,5 +85,6 @@ ggplot(world, aes(fill = region_un)) +
         theme_void()
 ```
 
+## Contributions
 
-
+[Feel free to submit issues and enhancement requests.](https://github.com/Nowosad/rcartocolor/issues)

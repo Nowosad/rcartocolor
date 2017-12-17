@@ -51,7 +51,12 @@ display_carto_all()
 
 ![](man/figures/README-example3-1.png)
 
+### **ggplot2**
+
+The **rcartocolor** package contains four **ggplot2** color scales: two for continuous data - `scale_fill_carto_c`, `scale_color_carto_c` and two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:
+
 ``` r
+# devtools::install_github("tidyverse/ggplot2")
 library(sf)
 #> Linking to GEOS 3.5.0, GDAL 2.1.2, proj.4 4.9.2
 library(spData)
@@ -75,3 +80,8 @@ ggplot(world, aes(fill = region_un)) +
 ```
 
 ![](man/figures/README-examplegg2-1.png)
+
+Contributions
+-------------
+
+[Feel free to submit issues and enhancement requests.](https://github.com/Nowosad/rcartocolor/issues)
