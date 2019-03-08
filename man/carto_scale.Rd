@@ -4,9 +4,7 @@
 \alias{scale_color_carto_c}
 \alias{scale_color_carto_d}
 \alias{scale_colour_carto_c}
-\alias{scale_color_carto_c}
 \alias{scale_colour_carto_d}
-\alias{scale_color_carto_d}
 \alias{scale_fill_carto_c}
 \alias{scale_fill_carto_d}
 \title{CARTO color scales}
@@ -14,8 +12,8 @@
 scale_color_carto_c(..., type = "quantitative", palette = 1,
   direction = 1, na.value = "#e9e9e9", guide = "colourbar")
 
-scale_color_carto_d(..., type = "qualitative", palette = 1, direction = 1,
-  na.value = "#e9e9e9")
+scale_color_carto_d(..., type = "qualitative", palette = 1,
+  direction = 1, na.value = "#e9e9e9")
 
 scale_colour_carto_c(..., type = "quantitative", palette = 1,
   direction = 1, na.value = "#e9e9e9", guide = "colourbar")
@@ -23,11 +21,11 @@ scale_colour_carto_c(..., type = "quantitative", palette = 1,
 scale_colour_carto_d(..., type = "qualitative", palette = 1,
   direction = 1, na.value = "#e9e9e9")
 
-scale_fill_carto_c(..., type = "quantitative", palette = 1, direction = 1,
-  na.value = "#e9e9e9", guide = "colourbar")
+scale_fill_carto_c(..., type = "quantitative", palette = 1,
+  direction = 1, na.value = "#e9e9e9", guide = "colourbar")
 
-scale_fill_carto_d(..., type = "qualitative", palette = 1, direction = 1,
-  na.value = "#e9e9e9")
+scale_fill_carto_d(..., type = "qualitative", palette = 1,
+  direction = 1, na.value = "#e9e9e9")
 }
 \arguments{
 \item{...}{Other arguments passed on to \code{\link[=discrete_scale]{discrete_scale()}} or

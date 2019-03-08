@@ -1,13 +1,13 @@
 Package: rcartocolor
 Title: 'CARTOColors' Palettes
-Version: 0.0.21
+Version: 1.0.0
 Authors@R: person("Jakub", "Nowosad", email = "nowosad.jakub@gmail.com", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-1057-3721"))
 Description: Provides color schemes for maps and other graphics
         designed by 'CARTO' as described at <https://carto.com/carto-colors/>.
         It includes four types of palettes: aggregation, diverging, qualitative, 
         and quantitative.
-Depends: R (>= 3.4.1)
+Depends: R (>= 3.4)
 Imports:
     ggplot2,
     scales
@@ -17,7 +17,7 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.1
 Suggests: covr,
     MASS,
     testthat,

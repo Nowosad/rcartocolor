@@ -8,7 +8,8 @@ metacartocolors = cartocolors %>%
         filter(!map_lgl(value, is.null)) %>%
         group_by(Name, Type) %>%
         summarise(Min_n = min(key), Max_n = max(key)) %>%
-        arrange(Type)
+        arrange(Type) %>%
+        as.data.frame()
 
-devtools::use_data(metacartocolors, overwrite = TRUE)
+usethis::use_data(metacartocolors, overwrite = TRUE)
 

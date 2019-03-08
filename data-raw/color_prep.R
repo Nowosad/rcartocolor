@@ -25,4 +25,4 @@ cartocolors = cartocolors_no_qual %>%
         arrange(Type, desc(Name))
 
 # save data
-devtools::use_data(cartocolors, overwrite = TRUE)
+usethis::use_data(cartocolors, overwrite = TRUE)
