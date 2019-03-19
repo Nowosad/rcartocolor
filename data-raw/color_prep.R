@@ -3,7 +3,7 @@
 library(jsonlite)
 library(tidyverse)
 
-cartocolors = fromJSON("data-raw/cartocolor.js") %>%
+cartocolors = fromJSON("data-raw/cartocolor.json") %>%
         map(t) %>%
         map(as.data.frame) %>%
         map_df(bind_rows, .id = "Name") %>%
