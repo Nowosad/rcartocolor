@@ -56,7 +56,6 @@ ggplot(msleep, aes(vore, sleep_total, fill = vore)) +
         scale_fill_carto_d(palette = 6, direction = -1)
 
 \dontrun{
-# devtools::install_github("tidyverse/ggplot2")
 library(sf)
 library(spData)
 library(ggplot2)

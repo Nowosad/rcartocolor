@@ -9,6 +9,7 @@
 #'
 #' @examples
 #' my_colors = carto_pal(7, "Burg")
+#' my_colors
 #'
 #' @export
 carto_pal = function(n = NULL, name){

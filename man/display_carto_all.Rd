@@ -9,7 +9,7 @@ display_carto_all(n = NULL, type = "all")
 \arguments{
 \item{n}{Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)}
 
-\item{type}{Type of the palette, could be "quantitative", "diverging", "qualitative", "aggregation", or "all}
+\item{type}{Type of the palette, could be "quantitative", "diverging", "qualitative", "aggregation", or "all"}
 }
 \value{
 A character vector

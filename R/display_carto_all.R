@@ -3,7 +3,7 @@
 #' Displays a set of color palettes from CARTOcolor
 #'
 #' @param n Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)
-#' @param type Type of the palette, could be "quantitative", "diverging", "qualitative", "aggregation", or "all
+#' @param type Type of the palette, could be "quantitative", "diverging", "qualitative", "aggregation", or "all"
 #'
 #' @return A character vector
 #'
