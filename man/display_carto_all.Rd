@@ -13,9 +13,6 @@ display_carto_all(n = NULL, type = "all", colorblind_friendly = NULL)
 
 \item{colorblind_friendly}{if TRUE, display only colorblind friendly palettes}
 }
-\value{
-A character vector
-}
 \description{
 Displays a set of the color palettes from CARTOcolor
 }

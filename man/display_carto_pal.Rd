@@ -11,9 +11,6 @@ display_carto_pal(n = NULL, name)
 
 \item{name}{A palette name}
 }
-\value{
-A character vector
-}
 \description{
 Displays a color palette from CARTOcolor
 }

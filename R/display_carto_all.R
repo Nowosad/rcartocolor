@@ -6,8 +6,6 @@
 #' @param type Type of the palette, can be "quantitative", "diverging", "qualitative", "aggregation", or "all"
 #' @param colorblind_friendly if TRUE, display only colorblind friendly palettes
 #'
-#' @return A character vector
-#'
 #' @importFrom graphics par plot rect text
 #'
 #' @examples

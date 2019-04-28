@@ -5,8 +5,6 @@
 #' @param n Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)
 #' @param name A palette name
 #'
-#' @return A character vector
-#'
 #' @importFrom graphics image
 #'
 #' @examples
