@@ -11,5 +11,12 @@ metacartocolors = cartocolors %>%
         arrange(Type) %>%
         as.data.frame()
 
+# colorblind friendly -----------------------------------------------------
+quantitative_list = metacartocolors$Name[metacartocolors$Type == "quantitative"]
+colorblind_list = c("Earth", "ArmyRose", "Safe", "ag_Sunset", "ag_GrnYl", quantitative_list)
+colorblind_friendly = metacartocolors$Name %in% colorblind_list
+
+metacartocolors$Colorblind_friendly = colorblind_friendly
+
 usethis::use_data(metacartocolors, overwrite = TRUE)
 

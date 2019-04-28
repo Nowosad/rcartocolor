@@ -3,7 +3,7 @@ test_that("palette generation is accurate", {
 
         # data is intact
         expect_equal(dim(cartocolors), c(34, 13))
-        expect_equal(dim(metacartocolors), c(34, 4))
+        expect_equal(dim(metacartocolors), c(34, 5))
 
         # options work as expected
         expect_equal(carto_pal(3, name = "Safe"), c("#88CCEE", "#CC6677", "#888888"))

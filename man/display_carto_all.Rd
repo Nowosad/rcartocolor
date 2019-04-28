@@ -4,18 +4,20 @@
 \alias{display_carto_all}
 \title{CARTOcolor palettes viewer}
 \usage{
-display_carto_all(n = NULL, type = "all")
+display_carto_all(n = NULL, type = "all", colorblind_friendly = NULL)
 }
 \arguments{
-\item{n}{Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)}
+\item{n}{Number of different colors in the palette, minimum depending on the palette (2 or 3), maximum depending on the palette (7 or 11)}
 
-\item{type}{Type of the palette, could be "quantitative", "diverging", "qualitative", "aggregation", or "all"}
+\item{type}{Type of the palette, can be "quantitative", "diverging", "qualitative", "aggregation", or "all"}
+
+\item{colorblind_friendly}{if TRUE, display only colorblind friendly palettes}
 }
 \value{
 A character vector
 }
 \description{
-Displays a set of color palettes from CARTOcolor
+Displays a set of the color palettes from CARTOcolor
 }
 \examples{
 display_carto_all()
@@ -23,5 +25,8 @@ display_carto_all(type = "quantitative")
 display_carto_all(type = c("diverging", "qualitative", "aggregation"))
 display_carto_all(3, type = "quantitative")
 display_carto_all(7, type = "quantitative")
+display_carto_all(7, colorblind_friendly = TRUE)
+display_carto_all(7, type = c("diverging", "qualitative", "aggregation"),
+  colorblind_friendly = TRUE)
 
 }

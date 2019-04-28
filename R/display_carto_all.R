@@ -1,9 +1,10 @@
 #' CARTOcolor palettes viewer
 #'
-#' Displays a set of color palettes from CARTOcolor
+#' Displays a set of the color palettes from CARTOcolor
 #'
-#' @param n Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)
-#' @param type Type of the palette, could be "quantitative", "diverging", "qualitative", "aggregation", or "all"
+#' @param n Number of different colors in the palette, minimum depending on the palette (2 or 3), maximum depending on the palette (7 or 11)
+#' @param type Type of the palette, can be "quantitative", "diverging", "qualitative", "aggregation", or "all"
+#' @param colorblind_friendly if TRUE, display only colorblind friendly palettes
 #'
 #' @return A character vector
 #'
@@ -15,9 +16,12 @@
 #' display_carto_all(type = c("diverging", "qualitative", "aggregation"))
 #' display_carto_all(3, type = "quantitative")
 #' display_carto_all(7, type = "quantitative")
+#' display_carto_all(7, colorblind_friendly = TRUE)
+#' display_carto_all(7, type = c("diverging", "qualitative", "aggregation"),
+#'   colorblind_friendly = TRUE)
 #'
 #' @export
-display_carto_all = function(n = NULL, type = "all"){
+display_carto_all = function(n = NULL, type = "all", colorblind_friendly = NULL){
         if(any(type == "all")){
                 selected_type = rcartocolor::cartocolors
         } else if (any(type %in% c("quantitative", "diverging", "qualitative", "aggregation"))){
@@ -26,6 +30,11 @@ display_carto_all = function(n = NULL, type = "all"){
                 stop(paste(type, "is not a valid name for a color type\n"))
         }
         selected_metadata = rcartocolor::metacartocolors[rcartocolor::metacartocolors$Name %in% selected_type$Name, ]
+
+        if(isTRUE(colorblind_friendly)){
+                selected_metadata = selected_metadata[selected_metadata$Colorblind_friendly, ]
+        }
+
         n_colors = nrow(selected_metadata)
 
         if(is.null(n)){

@@ -59,6 +59,12 @@ Display all of the CARTOcolor palettes:
 display_carto_all()
 ```
 
+Only display colorblind friendly palettes:
+
+```{r example4, fig.height=8, fig.width=7}
+display_carto_all(colorblind_friendly = TRUE)
+```
+
 ### **ggplot2**
 
 The **rcartocolor** package contains four **ggplot2** color scales: two for continuous data - `scale_fill_carto_c`, `scale_color_carto_c` and two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:

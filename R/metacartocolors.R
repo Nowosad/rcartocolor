@@ -8,4 +8,5 @@
 #' * Type: palette type
 #' * Min_n: minimal number of colors in a given palette
 #' * Max_n: maximal number of colors in a given palette
+#' * Colorblind_friendly: is the palette colorblind friendly?
 "metacartocolors"
