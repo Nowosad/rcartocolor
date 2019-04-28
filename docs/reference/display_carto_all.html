@@ -32,7 +32,7 @@
 
 <meta property="og:title" content="CARTOcolor palettes viewer — display_carto_all" />
 
-<meta property="og:description" content="Displays a set of color palettes from CARTOcolor" />
+<meta property="og:description" content="Displays a set of the color palettes from CARTOcolor" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -63,7 +63,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">rcartocolor</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">2.0.0</span>
       </span>
     </div>
 
@@ -106,22 +106,26 @@
 
     <div class="ref-description">
     
-    <p>Displays a set of color palettes from CARTOcolor</p>
+    <p>Displays a set of the color palettes from CARTOcolor</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>display_carto_all</span>(<span class='kw'>n</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"all"</span>)</pre>
+    <pre class="usage"><span class='fu'>display_carto_all</span>(<span class='kw'>n</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"all"</span>, <span class='kw'>colorblind_friendly</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>n</th>
-      <td><p>Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)</p></td>
+      <td><p>Number of different colors in the palette, minimum depending on the palette (2 or 3), maximum depending on the palette (7 or 11)</p></td>
     </tr>
     <tr>
       <th>type</th>
-      <td><p>Type of the palette, could be "quantitative", "diverging", "qualitative", "aggregation", or "all"</p></td>
+      <td><p>Type of the palette, can be "quantitative", "diverging", "qualitative", "aggregation", or "all"</p></td>
+    </tr>
+    <tr>
+      <th>colorblind_friendly</th>
+      <td><p>if TRUE, display only colorblind friendly palettes</p></td>
     </tr>
     </table>
     
@@ -131,7 +135,8 @@
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>display_carto_all</span>()</div><div class='img'><img src='display_carto_all-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>display_carto_all</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"quantitative"</span>)</div><div class='img'><img src='display_carto_all-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>display_carto_all</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"diverging"</span>, <span class='st'>"qualitative"</span>, <span class='st'>"aggregation"</span>))</div><div class='img'><img src='display_carto_all-3.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>display_carto_all</span>(<span class='fl'>3</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"quantitative"</span>)</div><div class='img'><img src='display_carto_all-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>display_carto_all</span>(<span class='fl'>7</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"quantitative"</span>)</div><div class='img'><img src='display_carto_all-5.png' alt='' width='700' height='433' /></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>display_carto_all</span>()</div><div class='img'><img src='display_carto_all-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>display_carto_all</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"quantitative"</span>)</div><div class='img'><img src='display_carto_all-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>display_carto_all</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"diverging"</span>, <span class='st'>"qualitative"</span>, <span class='st'>"aggregation"</span>))</div><div class='img'><img src='display_carto_all-3.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>display_carto_all</span>(<span class='fl'>3</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"quantitative"</span>)</div><div class='img'><img src='display_carto_all-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>display_carto_all</span>(<span class='fl'>7</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"quantitative"</span>)</div><div class='img'><img src='display_carto_all-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>display_carto_all</span>(<span class='fl'>7</span>, <span class='kw'>colorblind_friendly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='display_carto_all-6.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>display_carto_all</span>(<span class='fl'>7</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/c'>c</a></span>(<span class='st'>"diverging"</span>, <span class='st'>"qualitative"</span>, <span class='st'>"aggregation"</span>),
+  <span class='kw'>colorblind_friendly</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>)</div><div class='img'><img src='display_carto_all-7.png' alt='' width='700' height='433' /></div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

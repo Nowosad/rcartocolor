@@ -55,13 +55,13 @@ my_colors
 
 Display all of the CARTOcolor palettes:
 
-```{r example3, fig.height=8, fig.width=7}
+```{r example3, fig.height=7, fig.width=6}
 display_carto_all()
 ```
 
 Only display colorblind friendly palettes:
 
-```{r example4, fig.height=8, fig.width=7}
+```{r example4, fig.height=6, fig.width=6}
 display_carto_all(colorblind_friendly = TRUE)
 ```
 
