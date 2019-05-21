@@ -81,50 +81,50 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>Get the released version from CRAN:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"rcartocolor"</span>)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"rcartocolor"</span>)</a></code></pre></div>
 <p>Get the development version from github:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages("remotes")</span>
-remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"Nowosad/rcartocolor"</span>)</code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="co"># install.packages("remotes")</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"Nowosad/rcartocolor"</span>)</a></code></pre></div>
 </div>
 <div id="examples" class="section level2">
 <h2 class="hasAnchor">
 <a href="#examples" class="anchor"></a>Examples</h2>
 <p>Display a CARTOcolor palette:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(rcartocolor)
-<span class="kw"><a href="reference/display_carto_pal.html">display_carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Vivid"</span>)</code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(rcartocolor)</a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="reference/display_carto_pal.html">display_carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Vivid"</span>)</a></code></pre></div>
 <p><img src="reference/figures/README-example-1.png" width="700"></p>
 <p>Create a CARTOcolor palette:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">my_colors =<span class="st"> </span><span class="kw"><a href="reference/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Burg"</span>)
-my_colors
-<span class="co">#&gt; [1] "#ffc6c4" "#f4a3a8" "#e38191" "#cc607d" "#ad466c" "#8b3058" "#672044"</span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1">my_colors =<span class="st"> </span><span class="kw"><a href="reference/carto_pal.html">carto_pal</a></span>(<span class="dv">7</span>, <span class="st">"Burg"</span>)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2">my_colors</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="co">#&gt; [1] "#ffc6c4" "#f4a3a8" "#e38191" "#cc607d" "#ad466c" "#8b3058" "#672044"</span></a></code></pre></div>
 <p>Display all of the CARTOcolor palettes:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/display_carto_all.html">display_carto_all</a></span>()</code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="reference/display_carto_all.html">display_carto_all</a></span>()</a></code></pre></div>
 <p><img src="reference/figures/README-example3-1.png" width="576"></p>
 <p>Only display colorblind friendly palettes:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/display_carto_all.html">display_carto_all</a></span>(<span class="dt">colorblind_friendly =</span> <span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="reference/display_carto_all.html">display_carto_all</a></span>(<span class="dt">colorblind_friendly =</span> <span class="ot">TRUE</span>)</a></code></pre></div>
 <p><img src="reference/figures/README-example4-1.png" width="576"></p>
 <div id="ggplot2" class="section level3">
 <h3 class="hasAnchor">
 <a href="#ggplot2" class="anchor"></a><strong>ggplot2</strong>
 </h3>
 <p>The <strong>rcartocolor</strong> package contains four <strong>ggplot2</strong> color scales: two for continuous data - <code>scale_fill_carto_c</code>, <code>scale_color_carto_c</code> and two for discrete data - <code>scale_fill_carto_d</code>, <code>scale_color_carto_d</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># devtools::install_github("tidyverse/ggplot2")</span>
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(sf)
-<span class="co">#&gt; Linking to GEOS 3.6.1, GDAL 2.3.2, PROJ 4.9.3</span>
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(spData)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(world, <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">fill =</span> lifeExp)) <span class="op">+</span>
-<span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggsf">geom_sf</a></span>(<span class="dt">data =</span> world) <span class="op">+</span>
-<span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggsf">coord_sf</a></span>(<span class="dt">crs =</span> <span class="st">"+proj=robin"</span>) <span class="op">+</span>
-<span class="st">        </span><span class="kw"><a href="reference/carto_scale.html">scale_fill_carto_c</a></span>(<span class="dt">name =</span> <span class="st">"Life expectancy: "</span>,
-                           <span class="dt">type =</span> <span class="st">"diverging"</span>, <span class="dt">palette =</span> <span class="st">"Fall"</span>, <span class="dt">direction =</span> <span class="op">-</span><span class="dv">1</span>) <span class="op">+</span>
-<span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggtheme">theme_void</a></span>()</code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" data-line-number="1"><span class="co"># devtools::install_github("tidyverse/ggplot2")</span></a>
+<a class="sourceLine" id="cb7-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(sf)</a>
+<a class="sourceLine" id="cb7-3" data-line-number="3"><span class="co">#&gt; Linking to GEOS 3.7.1, GDAL 2.3.2, PROJ 5.2.0</span></a>
+<a class="sourceLine" id="cb7-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(spData)</a>
+<a class="sourceLine" id="cb7-5" data-line-number="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(ggplot2)</a>
+<a class="sourceLine" id="cb7-6" data-line-number="6"><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(world, <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">fill =</span> lifeExp)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-7" data-line-number="7"><span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggsf">geom_sf</a></span>(<span class="dt">data =</span> world) <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-8" data-line-number="8"><span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggsf">coord_sf</a></span>(<span class="dt">crs =</span> <span class="st">"+proj=robin"</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-9" data-line-number="9"><span class="st">        </span><span class="kw"><a href="reference/carto_scale.html">scale_fill_carto_c</a></span>(<span class="dt">name =</span> <span class="st">"Life expectancy: "</span>,</a>
+<a class="sourceLine" id="cb7-10" data-line-number="10">                           <span class="dt">type =</span> <span class="st">"diverging"</span>, <span class="dt">palette =</span> <span class="st">"Earth"</span>, <span class="dt">direction =</span> <span class="dv">-1</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb7-11" data-line-number="11"><span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggtheme">theme_void</a></span>()</a></code></pre></div>
 <p><img src="reference/figures/README-examplegg1-1.png" width="700"></p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(world, <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">fill =</span> region_un)) <span class="op">+</span>
-<span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggsf">geom_sf</a></span>(<span class="dt">data =</span> world) <span class="op">+</span>
-<span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggsf">coord_sf</a></span>(<span class="dt">crs =</span> <span class="st">"+proj=robin"</span>)  <span class="op">+</span>
-<span class="st">        </span><span class="kw"><a href="reference/carto_scale.html">scale_fill_carto_d</a></span>(<span class="dt">name =</span> <span class="st">"Region: "</span>, <span class="dt">palette =</span> <span class="st">"Prism"</span>) <span class="op">+</span>
-<span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggtheme">theme_void</a></span>()</code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggplot">ggplot</a></span>(world, <span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/aes">aes</a></span>(<span class="dt">fill =</span> region_un)) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-2" data-line-number="2"><span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggsf">geom_sf</a></span>(<span class="dt">data =</span> world) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-3" data-line-number="3"><span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggsf">coord_sf</a></span>(<span class="dt">crs =</span> <span class="st">"+proj=robin"</span>)  <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-4" data-line-number="4"><span class="st">        </span><span class="kw"><a href="reference/carto_scale.html">scale_fill_carto_d</a></span>(<span class="dt">name =</span> <span class="st">"Region: "</span>, <span class="dt">palette =</span> <span class="st">"Safe"</span>) <span class="op">+</span></a>
+<a class="sourceLine" id="cb8-5" data-line-number="5"><span class="st">        </span><span class="kw"><a href="https://www.rdocumentation.org/packages/ggplot2/topics/ggtheme">theme_void</a></span>()</a></code></pre></div>
 <p><img src="reference/figures/README-examplegg2-1.png" width="700"></p>
 </div>
 </div>
