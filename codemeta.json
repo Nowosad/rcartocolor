@@ -1,0 +1,172 @@
+{
+  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@type": "SoftwareSourceCode",
+  "identifier": "rcartocolor",
+  "description": "Provides color schemes for maps and other graphics\n    designed by 'CARTO' as described at <https://carto.com/carto-colors/>.\n    It includes four types of palettes: aggregation, diverging, qualitative, \n    and quantitative.",
+  "name": "rcartocolor: 'CARTOColors' Palettes",
+  "codeRepository": "https://github.com/Nowosad/rcartocolor",
+  "issueTracker": "https://github.com/Nowosad/rcartocolor/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "2.0.0",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "version": "3.6.3",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 3.6.3 (2020-02-29)",
+  "provider": {
+    "@id": "https://cran.r-project.org",
+    "@type": "Organization",
+    "name": "Comprehensive R Archive Network (CRAN)",
+    "url": "https://cran.r-project.org"
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Jakub",
+      "familyName": "Nowosad",
+      "email": "nowosad.jakub@gmail.com",
+      "@id": "https://orcid.org/0000-0002-1057-3721"
+    }
+  ],
+  "contributor": {},
+  "copyrightHolder": {},
+  "funder": {},
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Jakub",
+      "familyName": "Nowosad",
+      "email": "nowosad.jakub@gmail.com",
+      "@id": "https://orcid.org/0000-0002-1057-3721"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "covr",
+      "name": "covr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=covr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "MASS",
+      "name": "MASS",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=MASS"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "testthat",
+      "name": "testthat",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=testthat"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "vdiffr",
+      "name": "vdiffr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=vdiffr"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "sf",
+      "name": "sf",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=sf"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "spData",
+      "name": "spData",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=spData"
+    }
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": ">= 3.4"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "ggplot2",
+      "name": "ggplot2",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=ggplot2"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "scales",
+      "name": "scales",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=scales"
+    }
+  ],
+  "readme": "https://github.com/Nowosad/rcartocolor/blob/master/README.md",
+  "fileSize": "233.606KB",
+  "contIntegration": ["https://travis-ci.org/Nowosad/rcartocolor", "https://codecov.io/gh/Nowosad/rcartocolor"],
+  "keywords": ["r", "package", "color-palette", "visualization", "ggplot2"],
+  "citation": [
+    {
+      "@type": "SoftwareSourceCode",
+      "datePublished": "2018",
+      "author": [
+        {
+          "@type": "Person",
+          "givenName": "Jakub",
+          "familyName": "Nowosad"
+        }
+      ],
+      "name": "'CARTOColors' Palettes",
+      "url": "https://nowosad.github.io/rcartocolor",
+      "description": "R package version 1.0"
+    }
+  ],
+  "relatedLink": "https://CRAN.R-project.org/package=rcartocolor"
+}
