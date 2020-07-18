@@ -56,7 +56,8 @@ display_carto_all()
 
 ![](man/figures/README-example3-1.png)<!-- -->
 
-Only display colorblind friendly palettes:
+[Only display colorblind friendly
+palettes](https://nowosad.github.io/colorblindcheck/articles/articles/check_rcartocolor.html):
 
 ``` r
 display_carto_all(colorblind_friendly = TRUE)
@@ -73,7 +74,7 @@ two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:
 ``` r
 # devtools::install_github("tidyverse/ggplot2")
 library(sf)
-#> Linking to GEOS 3.7.1, GDAL 2.3.2, PROJ 5.2.0
+#> Linking to GEOS 3.8.1, GDAL 3.0.4, PROJ 6.3.2
 library(spData)
 library(ggplot2)
 ggplot(world, aes(fill = lifeExp)) +

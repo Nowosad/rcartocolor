@@ -59,7 +59,7 @@ Display all of the CARTOcolor palettes:
 display_carto_all()
 ```
 
-Only display colorblind friendly palettes:
+[Only display colorblind friendly palettes](https://nowosad.github.io/colorblindcheck/articles/articles/check_rcartocolor.html):
 
 ```{r example4, fig.height=6, fig.width=6}
 display_carto_all(colorblind_friendly = TRUE)
