@@ -4,12 +4,14 @@
 \name{cartocolors}
 \alias{cartocolors}
 \title{CARTOColors database}
-\format{A data frame with 32 rows and 12 variables:
+\format{
+A data frame with 32 rows and 12 variables:
 \itemize{
 \item Name: palette name
 \item Type: palette type
 \item n2 to n11: list of the color values depending on the number of colors used (between two and twelve)
-}}
+}
+}
 \usage{
 cartocolors
 }
