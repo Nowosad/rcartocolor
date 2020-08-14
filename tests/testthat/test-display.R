@@ -12,7 +12,7 @@ test_that("palette display", {
 
         # warnings
         expect_warning(display_carto_pal(2, name = "PurpOr"))
-        expect_warning(display_carto_pal(12, name = "Burg"))
+        # expect_warning(display_carto_pal(12, name = "Burg"))
 
 })
 
