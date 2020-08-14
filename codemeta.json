@@ -1,5 +1,8 @@
 {
-  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "rcartocolor",
   "description": "Provides color schemes for maps and other graphics\n    designed by 'CARTO' as described at <https://carto.com/carto-colors/>.\n    It includes four types of palettes: aggregation, diverging, qualitative, \n    and quantitative.",
@@ -7,14 +10,13 @@
   "codeRepository": "https://github.com/Nowosad/rcartocolor",
   "issueTracker": "https://github.com/Nowosad/rcartocolor/issues",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
-    "version": "3.6.3",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 3.6.3 (2020-02-29)",
+  "runtimePlatform": "R version 4.0.2 (2020-06-22)",
   "provider": {
     "@id": "https://cran.r-project.org",
     "@type": "Organization",
@@ -149,9 +151,15 @@
     }
   ],
   "readme": "https://github.com/Nowosad/rcartocolor/blob/master/README.md",
-  "fileSize": "233.606KB",
+  "fileSize": "1311.976KB",
   "contIntegration": ["https://travis-ci.org/Nowosad/rcartocolor", "https://codecov.io/gh/Nowosad/rcartocolor"],
-  "keywords": ["r", "package", "color-palette", "visualization", "ggplot2"],
+  "keywords": [
+    "r",
+    "package",
+    "color-palette",
+    "visualization",
+    "ggplot2"
+  ],
   "citation": [
     {
       "@type": "SoftwareSourceCode",

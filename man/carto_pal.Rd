@@ -4,12 +4,14 @@
 \alias{carto_pal}
 \title{CARTOcolor palettes}
 \usage{
-carto_pal(n = NULL, name)
+carto_pal(n = NULL, name, ...)
 }
 \arguments{
 \item{n}{Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)}
 
 \item{name}{A palette name}
+
+\item{...}{Additional arguments for \link[grDevices:colorRamp]{grDevices::colorRampPalette}}
 }
 \value{
 A character vector
@@ -18,7 +20,12 @@ A character vector
 Creates a color palette from CARTOcolor
 }
 \examples{
-my_colors = carto_pal(7, "Burg")
-my_colors
+my_colors1 = carto_pal(7, "Burg")
+my_colors1
 
+my_colors2 = carto_pal(17, "Burg")
+my_colors2
+
+my_colors3 = carto_pal(17, "Safe")
+my_colors3
 }

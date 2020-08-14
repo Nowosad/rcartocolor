@@ -4,14 +4,16 @@
 \name{metacartocolors}
 \alias{metacartocolors}
 \title{CARTOColors database metadata}
-\format{A data frame with 32 rows and 12 variables:
+\format{
+A data frame with 32 rows and 12 variables:
 \itemize{
 \item Name: palette name
 \item Type: palette type
 \item Min_n: minimal number of colors in a given palette
 \item Max_n: maximal number of colors in a given palette
 \item Colorblind_friendly: is the palette colorblind friendly?
-}}
+}
+}
 \usage{
 metacartocolors
 }

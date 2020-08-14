@@ -9,29 +9,62 @@
 \alias{scale_fill_carto_d}
 \title{CARTO color scales}
 \usage{
-scale_color_carto_c(..., type = "quantitative", palette = 1,
-  direction = 1, na.value = "#e9e9e9", guide = "colourbar")
+scale_color_carto_c(
+  ...,
+  type = "quantitative",
+  palette = 1,
+  direction = 1,
+  na.value = "#e9e9e9",
+  guide = "colourbar"
+)
 
-scale_color_carto_d(..., type = "qualitative", palette = 1,
-  direction = 1, na.value = "#e9e9e9")
+scale_color_carto_d(
+  ...,
+  type = "qualitative",
+  palette = 1,
+  direction = 1,
+  na.value = "#e9e9e9"
+)
 
-scale_colour_carto_c(..., type = "quantitative", palette = 1,
-  direction = 1, na.value = "#e9e9e9", guide = "colourbar")
+scale_colour_carto_c(
+  ...,
+  type = "quantitative",
+  palette = 1,
+  direction = 1,
+  na.value = "#e9e9e9",
+  guide = "colourbar"
+)
 
-scale_colour_carto_d(..., type = "qualitative", palette = 1,
-  direction = 1, na.value = "#e9e9e9")
+scale_colour_carto_d(
+  ...,
+  type = "qualitative",
+  palette = 1,
+  direction = 1,
+  na.value = "#e9e9e9"
+)
 
-scale_fill_carto_c(..., type = "quantitative", palette = 1,
-  direction = 1, na.value = "#e9e9e9", guide = "colourbar")
+scale_fill_carto_c(
+  ...,
+  type = "quantitative",
+  palette = 1,
+  direction = 1,
+  na.value = "#e9e9e9",
+  guide = "colourbar"
+)
 
-scale_fill_carto_d(..., type = "qualitative", palette = 1,
-  direction = 1, na.value = "#e9e9e9")
+scale_fill_carto_d(
+  ...,
+  type = "qualitative",
+  palette = 1,
+  direction = 1,
+  na.value = "#e9e9e9"
+)
 }
 \arguments{
 \item{...}{Other arguments passed on to \code{\link[=discrete_scale]{discrete_scale()}} or
 \code{\link[=continuous_scale]{continuous_scale()}} to control name, limits, breaks, labels and so forth}
 
-\item{type}{One of "aggregation", "diverging", "qualitative", or "quantitative"}
+\item{type}{One of \"aggregation\", \"diverging\", \"qualitative\", or \"quantitative\"}
 
 \item{palette}{If a string, will use that named palette. If a number, will
 index into the list of palettes of appropriate \code{type}}
@@ -43,7 +76,7 @@ order of colors is reversed}
 \item{na.value}{Missing values will be replaced with this value.}
 
 \item{guide}{A function used to create a guide or its name. See
-\code{\link[=guides]{guides()}} for more info.}
+\code{\link[ggplot2:guides]{guides()}} for more information.}
 }
 \description{
 CARTO color scales
