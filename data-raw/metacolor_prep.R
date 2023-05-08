@@ -1,5 +1,7 @@
 library(rcartocolor)
-library(tidyverse)
+library(dplyr)
+library(tidyr)
+library(purrr)
 
 metacartocolors = cartocolors %>%
         # select(-Type) %>%
@@ -13,7 +15,7 @@ metacartocolors = cartocolors %>%
 
 # colorblind friendly -----------------------------------------------------
 quantitative_list = metacartocolors$Name[metacartocolors$Type == "quantitative"]
-colorblind_list = c("Earth", "ArmyRose", "Safe", "ag_Sunset", "ag_GrnYl", quantitative_list)
+colorblind_list = c("Earth", "ArmyRose", "Geyser", "Safe", "ag_Sunset", "ag_GrnYl", quantitative_list)
 colorblind_friendly = metacartocolors$Name %in% colorblind_list
 
 metacartocolors$Colorblind_friendly = colorblind_friendly
