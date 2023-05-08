@@ -6,7 +6,7 @@
 [![Build
 Status](https://travis-ci.org/Nowosad/rcartocolor.png?branch=master)](https://travis-ci.org/Nowosad/rcartocolor)
 [![codecov](https://codecov.io/gh/Nowosad/rcartocolor/branch/master/graph/badge.svg)](https://codecov.io/gh/Nowosad/rcartocolor)
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
 
@@ -45,7 +45,7 @@ Create a CARTOcolor palette:
 ``` r
 my_colors = carto_pal(7, "Burg")
 my_colors
-#> [1] "#ffc6c4" "#f4a3a8" "#e38191" "#cc607d" "#ad466c" "#8b3058" "#672044"
+#> [1] "#FFC6C4" "#F4A3A8" "#E38191" "#CC607D" "#AD466C" "#8B3058" "#672044"
 ```
 
 Display all of the CARTOcolor palettes:
@@ -74,7 +74,7 @@ two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:
 ``` r
 # devtools::install_github("tidyverse/ggplot2")
 library(sf)
-#> Linking to GEOS 3.8.1, GDAL 3.0.4, PROJ 6.3.2
+#> Linking to GEOS 3.11.0, GDAL 3.5.2, PROJ 9.0.1; sf_use_s2() is TRUE
 library(spData)
 library(ggplot2)
 ggplot(world, aes(fill = lifeExp)) +
