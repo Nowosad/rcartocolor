@@ -3,12 +3,14 @@
 
 # rcartocolor
 
-[![Build
-Status](https://travis-ci.org/Nowosad/rcartocolor.png?branch=master)](https://travis-ci.org/Nowosad/rcartocolor)
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/Nowosad/rcartocolor/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/rcartocolor/actions/workflows/R-CMD-check.yaml)
 [![codecov](https://codecov.io/gh/Nowosad/rcartocolor/branch/master/graph/badge.svg)](https://codecov.io/gh/Nowosad/rcartocolor)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
+<!-- badges: end -->
 
 The goal of `rcartocolor` is to provide color schemes for maps and other
 graphics designed by [CARTO](https://carto.com/) as described at
@@ -74,8 +76,11 @@ two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:
 ``` r
 # devtools::install_github("tidyverse/ggplot2")
 library(sf)
-#> Linking to GEOS 3.11.0, GDAL 3.5.2, PROJ 9.0.1; sf_use_s2() is TRUE
+#> Linking to GEOS 3.11.1, GDAL 3.6.4, PROJ 9.1.1; sf_use_s2() is TRUE
 library(spData)
+#> To access larger datasets in this package, install the spDataLarge
+#> package with: `install.packages('spDataLarge',
+#> repos='https://nowosad.github.io/drat/', type='source')`
 library(ggplot2)
 ggplot(world, aes(fill = lifeExp)) +
         geom_sf(data = world) +
