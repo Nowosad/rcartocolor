@@ -1,10 +1,10 @@
 citHeader("To cite rcartocolor in publications, please use:")
 
-citEntry(entry = "manual",
+bibentry(bibtype = "Manual",
   author = c(person("Jakub", "Nowosad")),
   title = "'CARTOColors' Palettes",
   year = "2018",
-  note = "R package version 1.0",
-  url = "https://nowosad.github.io/rcartocolor",
-  textVersion = "Nowosad, J. (2018). 'CARTOColors' Palettes. R package version 1.0.0. https://nowosad.github.io/rcartocolor"
+  note = "R package version 1.0.0",
+  url = "https://jakubnowosad.com/rcartocolor/",
+  textVersion = "Nowosad, J. (2018). 'CARTOColors' Palettes. R package version 1.0.0. https://jakubnowosad.com/rcartocolor/"
 )

@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/Nowosad/rcartocolor/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/rcartocolor/actions/workflows/R-CMD-check.yaml)
-[![codecov](https://codecov.io/gh/Nowosad/rcartocolor/branch/master/graph/badge.svg)](https://codecov.io/gh/Nowosad/rcartocolor)
+[![codecov](https://app.codecov.io/gh/Nowosad/rcartocolor/branch/master/graph/badge.svg)](https://app.codecov.io/gh/Nowosad/rcartocolor)
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
 [![CRAN RStudio mirror
 downloads](http://cranlogs.r-pkg.org/badges/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
@@ -59,7 +59,7 @@ display_carto_all()
 ![](man/figures/README-example3-1.png)<!-- -->
 
 [Only display colorblind friendly
-palettes](https://nowosad.github.io/colorblindcheck/articles/articles/check_rcartocolor.html):
+palettes](https://jakubnowosad.com/colorblindcheck/articles/check_rcartocolor.html):
 
 ``` r
 display_carto_all(colorblind_friendly = TRUE)
