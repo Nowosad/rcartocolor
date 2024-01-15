@@ -11,7 +11,7 @@ Depends: R (>= 3.4)
 Imports:
     ggplot2,
     scales
-URL: https://github.com/Nowosad/rcartocolor 
+URL: https://github.com/Nowosad/rcartocolor, https://jakubnowosad.com/rcartocolor/
 BugReports: https://github.com/Nowosad/rcartocolor/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
