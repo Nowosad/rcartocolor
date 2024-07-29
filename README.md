@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rcartocolor
+# rcartocolor <img src="man/figures/logo.png" align="right" height="139" alt="" />
 
 <!-- badges: start -->
 
@@ -76,11 +76,11 @@ two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:
 ``` r
 # devtools::install_github("tidyverse/ggplot2")
 library(sf)
-#> Linking to GEOS 3.11.1, GDAL 3.6.4, PROJ 9.1.1; sf_use_s2() is TRUE
+#> Linking to GEOS 3.12.2, GDAL 3.8.5, PROJ 9.3.1; sf_use_s2() is TRUE
+#> WARNING: different compile-time and runtime versions for GEOS found:
+#> Linked against: 3.12.2-CAPI-1.18.2 compiled against: 3.12.1-CAPI-1.18.1
+#> It is probably a good idea to reinstall sf (and maybe lwgeom too)
 library(spData)
-#> To access larger datasets in this package, install the spDataLarge
-#> package with: `install.packages('spDataLarge',
-#> repos='https://nowosad.github.io/drat/', type='source')`
 library(ggplot2)
 ggplot(world, aes(fill = lifeExp)) +
         geom_sf(data = world) +
