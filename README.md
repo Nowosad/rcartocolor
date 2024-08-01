@@ -77,9 +77,6 @@ two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:
 # devtools::install_github("tidyverse/ggplot2")
 library(sf)
 #> Linking to GEOS 3.12.2, GDAL 3.8.5, PROJ 9.3.1; sf_use_s2() is TRUE
-#> WARNING: different compile-time and runtime versions for GEOS found:
-#> Linked against: 3.12.2-CAPI-1.18.2 compiled against: 3.12.1-CAPI-1.18.1
-#> It is probably a good idea to reinstall sf (and maybe lwgeom too)
 library(spData)
 library(ggplot2)
 ggplot(world, aes(fill = lifeExp)) +
