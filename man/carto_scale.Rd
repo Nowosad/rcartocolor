@@ -61,8 +61,8 @@ scale_fill_carto_d(
 )
 }
 \arguments{
-\item{...}{Other arguments passed on to \code{\link[=discrete_scale]{discrete_scale()}} or
-\code{\link[=continuous_scale]{continuous_scale()}} to control name, limits, breaks, labels and so forth}
+\item{...}{Other arguments passed on to \code{\link[ggplot2:discrete_scale]{ggplot2::discrete_scale()}} or
+\code{\link[ggplot2:continuous_scale]{ggplot2::continuous_scale()}} to control name, limits, breaks, labels and so forth}
 
 \item{type}{One of \"aggregation\", \"diverging\", \"qualitative\", or \"quantitative\"}
 

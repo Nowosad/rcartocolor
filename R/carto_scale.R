@@ -9,8 +9,8 @@
 #' @inheritParams scales::gradient_n_pal
 #' @inheritParams ggplot2::continuous_scale
 #' @inheritParams ggplot2::discrete_scale
-#' @param ... Other arguments passed on to [discrete_scale()] or
-#' [continuous_scale()] to control name, limits, breaks, labels and so forth
+#' @param ... Other arguments passed on to [ggplot2::discrete_scale()] or
+#' [ggplot2::continuous_scale()] to control name, limits, breaks, labels and so forth
 #'
 #' @importFrom ggplot2 discrete_scale continuous_scale
 #' @importFrom scales gradient_n_pal
