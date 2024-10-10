@@ -1,15 +1,15 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# rcartocolor <img src="man/figures/logo.png" align="right" height="139" alt="" />
+# rcartocolor <img src="man/figures/logo.png" align="right" height="150" alt="" />
 
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/Nowosad/rcartocolor/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/rcartocolor/actions/workflows/R-CMD-check.yaml)
-[![codecov](https://app.codecov.io/gh/Nowosad/rcartocolor/branch/master/graph/badge.svg)](https://app.codecov.io/gh/Nowosad/rcartocolor)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
+[![codecov](https://codecov.io/gh/Nowosad/rcartocolor/branch/master/graph/badge.svg?token=tkiSWsEUYy)](https://codecov.io/gh/Nowosad/rcartocolor)
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
 [![CRAN RStudio mirror
-downloads](http://cranlogs.r-pkg.org/badges/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
+downloads](https://cranlogs.r-pkg.org/badges/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
 <!-- badges: end -->
 
 The goal of `rcartocolor` is to provide color schemes for maps and other
