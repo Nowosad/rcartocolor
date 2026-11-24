@@ -1,0 +1,142 @@
+# rcartocolor
+
+The goal of `rcartocolor` is to provide color schemes for maps and other
+graphics designed by [CARTO](https://carto.com/) as described at
+<https://carto.com/carto-colors/>.
+
+## Installation
+
+Get the released version from CRAN:
+
+``` r
+
+install.packages("rcartocolor")
+```
+
+Get the development version from github:
+
+``` r
+
+# install.packages("remotes")
+remotes::install_github("Nowosad/rcartocolor")
+```
+
+## Examples
+
+Display a CARTOcolor palette:
+
+``` r
+
+library(rcartocolor)
+display_carto_pal(7, "Vivid")
+```
+
+![](reference/figures/README-example-1.png)
+
+Create a CARTOcolor palette:
+
+``` r
+
+my_colors = carto_pal(7, "Burg")
+my_colors
+#> [1] "#FFC6C4" "#F4A3A8" "#E38191" "#CC607D" "#AD466C" "#8B3058" "#672044"
+```
+
+[Browse all 34
+palettes](https://jakubnowosad.com/rcartocolor/articles/palettes.html)
+to compare swatches and available sizes by palette type.
+
+Display all of the CARTOcolor palettes:
+
+``` r
+
+display_carto_all()
+```
+
+![](reference/figures/README-example3-1.png)
+
+[Only display colorblind friendly
+palettes](https://jakubnowosad.com/colorblindcheck/articles/check_rcartocolor.html):
+
+``` r
+
+display_carto_all(colorblind_friendly = TRUE)
+```
+
+![](reference/figures/README-example4-1.png)
+
+### **ggplot2**
+
+The **rcartocolor** package contains four **ggplot2** color scales: two
+for continuous data - `scale_fill_carto_c`, `scale_color_carto_c` and
+two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:
+
+``` r
+library(sf)
+<<<<<<< HEAD
+#> Linking to GEOS 3.14.1, GDAL 3.12.4, PROJ 9.8.1; sf_use_s2() is TRUE
+=======
+#> Linking to GEOS 3.13.0, GDAL 3.10.3, PROJ 9.6.0; sf_use_s2() is TRUE
+>>>>>>> refs/remotes/origin/master
+library(spData)
+library(ggplot2)
+ggplot(world, aes(fill = lifeExp)) +
+        geom_sf(data = world) +
+        coord_sf(crs = "+proj=robin") +
+        scale_fill_carto_c(name = "Life expectancy: ",
+                           type = "diverging", palette = "Earth", direction = -1) +
+        theme_void()
+```
+
+![](reference/figures/README-examplegg1-1.png)
+
+``` r
+
+ggplot(world, aes(fill = region_un)) +
+        geom_sf(data = world) +
+        coord_sf(crs = "+proj=robin")  +
+        scale_fill_carto_d(name = "Region: ", palette = "Safe") +
+        theme_void()
+```
+
+![](reference/figures/README-examplegg2-1.png)
+
+## Contributions
+
+[Feel free to submit issues and enhancement
+requests.](https://github.com/Nowosad/rcartocolor/issues)
+
+# Package index
+
+## Choose a palette
+
+- [`carto_pal()`](https://jakubnowosad.com/rcartocolor/reference/carto_pal.md)
+  : CARTOcolor palettes
+- [`display_carto_pal()`](https://jakubnowosad.com/rcartocolor/reference/display_carto_pal.md)
+  : CARTOcolor palette viewer
+- [`display_carto_all()`](https://jakubnowosad.com/rcartocolor/reference/display_carto_all.md)
+  : CARTOcolor palettes viewer
+
+## Use with ggplot2
+
+- [`scale_color_carto_c()`](https://jakubnowosad.com/rcartocolor/reference/carto_scale.md)
+  [`scale_color_carto_d()`](https://jakubnowosad.com/rcartocolor/reference/carto_scale.md)
+  [`scale_colour_carto_c()`](https://jakubnowosad.com/rcartocolor/reference/carto_scale.md)
+  [`scale_colour_carto_d()`](https://jakubnowosad.com/rcartocolor/reference/carto_scale.md)
+  [`scale_fill_carto_c()`](https://jakubnowosad.com/rcartocolor/reference/carto_scale.md)
+  [`scale_fill_carto_d()`](https://jakubnowosad.com/rcartocolor/reference/carto_scale.md)
+  : CARTO color scales
+
+## Palette data
+
+- [`cartocolors`](https://jakubnowosad.com/rcartocolor/reference/cartocolors.md)
+  : CARTOColors database
+- [`metacartocolors`](https://jakubnowosad.com/rcartocolor/reference/metacartocolors.md)
+  : CARTOColors database metadata
+
+# Articles
+
+### All vignettes
+
+- [Choose a
+  palette](https://jakubnowosad.com/rcartocolor/articles/palettes.md):

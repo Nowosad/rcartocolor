@@ -1,14 +1,16 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>/404.html</loc></url>
-<url><loc>/LICENSE-text.html</loc></url>
-<url><loc>/authors.html</loc></url>
-<url><loc>/index.html</loc></url>
-<url><loc>/reference/carto_pal.html</loc></url>
-<url><loc>/reference/carto_scale.html</loc></url>
-<url><loc>/reference/cartocolors.html</loc></url>
-<url><loc>/reference/display_carto_all.html</loc></url>
-<url><loc>/reference/display_carto_pal.html</loc></url>
-<url><loc>/reference/index.html</loc></url>
-<url><loc>/reference/metacartocolors.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/404.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/LICENSE-text.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/articles/index.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/articles/palettes.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/authors.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/index.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/reference/carto_pal.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/reference/carto_scale.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/reference/cartocolors.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/reference/display_carto_all.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/reference/display_carto_pal.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/reference/index.html</loc></url>
+<url><loc>https://jakubnowosad.com/rcartocolor/reference/metacartocolors.html</loc></url>
 </urlset>
 
