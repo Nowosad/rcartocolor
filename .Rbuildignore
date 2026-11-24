@@ -2,6 +2,7 @@
 ^\.Rproj\.user$
 ^README\.Rmd$
 ^README-.*\.png$
+^vignettes/articles$
 ^data-raw$
 ^\.travis\.yml$
 ^codecov\.yml$

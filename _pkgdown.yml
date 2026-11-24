@@ -1,1 +1,22 @@
+url: https://jakubnowosad.com/rcartocolor
 destination: docs
+
+template:
+  bootstrap: 5
+
+navbar:
+  structure:
+    left: [palettes, reference]
+    right: [search, github]
+  components:
+    palettes:
+      text: Palettes
+      href: articles/palettes.html
+
+reference:
+- title: Choose a palette
+  contents: [carto_pal, display_carto_pal, display_carto_all]
+- title: Use with ggplot2
+  contents: [scale_color_carto_c]
+- title: Palette data
+  contents: [cartocolors, metacartocolors]

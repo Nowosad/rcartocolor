@@ -1,0 +1,39 @@
+---
+title: "Choose a palette"
+output: rmarkdown::html_document
+---
+
+Use the palette name as shown, for example `carto_pal(5, "Burg")` for hex codes or `scale_fill_carto_c(palette = "Burg")` for a continuous **ggplot2** fill scale.
+
+```{r, echo = FALSE, results = "asis"}
+metadata = rcartocolor::metacartocolors
+
+for (type in c("Quantitative", "Diverging", "Qualitative", "Aggregation")) {
+  palettes = metadata[metadata$Type == tolower(type), ]
+  cat("\n\n## ", type, "\n\n", sep = "")
+
+  for (i in seq_len(nrow(palettes))) {
+    colors = rcartocolor::carto_pal(palettes$Max_n[i], palettes$Name[i])
+    tiles = sprintf(
+      '<span title="%s" style="width:.75em;height:1em;background:%s"></span>',
+      colors, colors
+    )
+    swatches = sprintf(
+      '<span class="d-inline-flex" role="img" aria-label="Hex colors %s">%s</span>',
+      paste(colors, collapse = ", "), paste(tiles, collapse = "")
+    )
+    cat(sprintf(
+      paste0(
+        '<p class="d-flex flex-wrap align-items-center gap-2 mb-2">',
+        '<strong style="width:6rem">%s</strong> ',
+        '<span style="width:5rem">%s–%s colors</span>%s</p>\n'
+      ),
+      palettes$Name[i], palettes$Min_n[i], palettes$Max_n[i], swatches
+    ))
+  }
+}
+```
+
+## Preview palettes in R
+
+Use `display_carto_all()` to see every palette or `display_carto_all(colorblind_friendly = TRUE)` to filter to palettes flagged as (colorblind-friendly)(https://jakubnowosad.com/colorblindcheck/articles/check_rcartocolor.html).
