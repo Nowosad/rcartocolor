@@ -45,12 +45,11 @@
 scale_color_carto_c = function(..., type = "quantitative",
                                palette = 1, direction = 1,
                                na.value = "#e9e9e9", guide = "colourbar") {
-        continuous_scale("colour",
-                         "carto_c",
-                         gradient_n_pal(carto_pal_scale(type, palette, direction)(7)),
-                         na.value = na.value,
-                         guide = guide,
-                         ...)
+        carto_scale(continuous_scale, "colour", "carto_c",
+                    gradient_n_pal(carto_pal_scale(type, palette, direction)(7)),
+                    na.value = na.value,
+                    guide = guide,
+                    ...)
 }
 
 #' @rdname carto_scale
@@ -58,11 +57,10 @@ scale_color_carto_c = function(..., type = "quantitative",
 scale_color_carto_d = function(..., type = "qualitative",
                                palette = 1, direction = 1,
                                na.value	= "#e9e9e9") {
-        discrete_scale("colour",
-                       "carto_d",
-                       carto_pal_scale(type, palette, direction),
-                       na.value	= na.value,
-                       ...)
+        carto_scale(discrete_scale, "colour", "carto_d",
+                    carto_pal_scale(type, palette, direction),
+                    na.value = na.value,
+                    ...)
 }
 
 
@@ -81,12 +79,11 @@ scale_colour_carto_d = scale_color_carto_d
 scale_fill_carto_c = function(..., type = "quantitative",
                               palette = 1, direction = 1,
                               na.value = "#e9e9e9", guide = "colourbar") {
-        continuous_scale("fill",
-                         "carto_c",
-                         gradient_n_pal(carto_pal_scale(type, palette, direction)(7)),
-                         na.value = na.value,
-                         guide = guide,
-                         ...)
+        carto_scale(continuous_scale, "fill", "carto_c",
+                    gradient_n_pal(carto_pal_scale(type, palette, direction)(7)),
+                    na.value = na.value,
+                    guide = guide,
+                    ...)
 }
 
 #' @rdname carto_scale
@@ -94,11 +91,23 @@ scale_fill_carto_c = function(..., type = "quantitative",
 scale_fill_carto_d = function(..., type = "qualitative",
                               palette = 1, direction = 1,
                               na.value	= "#e9e9e9") {
-        discrete_scale("fill",
-                       "carto_d",
-                       carto_pal_scale(type, palette, direction),
-                       na.value	= na.value,
-                       ...)
+        carto_scale(discrete_scale, "fill", "carto_d",
+                    carto_pal_scale(type, palette, direction),
+                    na.value = na.value,
+                    ...)
+}
+
+carto_scale = function(constructor, aesthetics, scale_name, palette, ...,
+                       call = sys.call(-1L)) {
+        if (package_version(getNamespaceVersion("ggplot2")) < "3.5.0") {
+                return(constructor(aesthetics, scale_name, palette, ...))
+        }
+
+        # Reserve the deprecated position for callers passing unnamed arguments.
+        if ("scale_name" %in% names(formals(constructor))) {
+                return(constructor(aesthetics, , palette, ..., call = call))
+        }
+        constructor(aesthetics, palette, ..., call = call)
 }
 
 carto_pal_scale = function(type = "quantitative", palette = 1, direction = 1) {
