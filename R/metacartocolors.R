@@ -3,7 +3,7 @@
 #' A dataset containing the information about the CARTOcolor palettes.
 #' Source: https://github.com/CartoDB/CartoColor/blob/master/cartocolor.js.
 #'
-#' @format A data frame with 32 rows and 12 variables:
+#' @format A data frame with 34 rows and 5 variables:
 #' * Name: palette name
 #' * Type: palette type
 #' * Min_n: minimal number of colors in a given palette
