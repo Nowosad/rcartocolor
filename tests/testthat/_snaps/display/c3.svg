@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' data-engine-version='2.0' width='720.00pt' height='576.00pt' viewBox='0 0 720.00 576.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA='>
+    <rect x='0.00' y='0.00' width='720.00' height='576.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3MjAuMDB8MC4wMHw1NzYuMDA=)'>
+<text x='374.40' y='34.48' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: sans;' textLength='131.28px' lengthAdjust='spacingAndGlyphs'>Bold: qualitative (12)</text>
+<text x='374.40' y='557.28' text-anchor='middle' style='font-size: 12.00px; font-family: sans;' textLength='3.33px' lengthAdjust='spacingAndGlyphs'> </text>
+<text transform='translate(12.96,280.80) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: sans;' textLength='3.33px' lengthAdjust='spacingAndGlyphs'> </text>
+</g>
+<defs>
+  <clipPath id='cpNTkuMDR8Njg5Ljc2fDU5LjA0fDUwMi41Ng=='>
+    <rect x='59.04' y='59.04' width='630.72' height='443.52' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNTkuMDR8Njg5Ljc2fDU5LjA0fDUwMi41Ng==)'>
+<rect x='59.04' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #7F3C8D;' />
+<rect x='111.60' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #11A579;' />
+<rect x='164.16' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #3969AC;' />
+<rect x='216.72' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #F2B701;' />
+<rect x='269.28' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #E73F74;' />
+<rect x='321.84' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #80BA5A;' />
+<rect x='374.40' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #E68310;' />
+<rect x='426.96' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #008695;' />
+<rect x='479.52' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #CF1C90;' />
+<rect x='532.08' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #F97B72;' />
+<rect x='584.64' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #4B4B8F;' />
+<rect x='637.20' y='59.04' width='52.56' height='443.52' style='stroke-width: 0.75; stroke: none; fill: #A5AA99;' />
+</g>
+</svg>
