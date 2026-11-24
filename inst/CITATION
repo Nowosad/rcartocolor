@@ -1,10 +1,18 @@
 citHeader("To cite rcartocolor in publications, please use:")
 
+date <- c(meta[["Date/Publication"]], meta[["Date"]], meta[["Packaged"]],
+          format(Sys.Date(), "%Y"))[1L]
+year <- substr(date, 1L, 4L)
+title <- paste0(meta$Package, ": ", meta$Title)
+doi <- "10.32614/CRAN.package.rcartocolor"
+
 bibentry(bibtype = "Manual",
-  author = c(person("Jakub", "Nowosad")),
-  title = "'CARTOColors' Palettes",
-  year = "2018",
-  note = "R package version 1.0.0",
+  author = person("Jakub", "Nowosad", comment = c(ORCID = "0000-0002-1057-3721")),
+  title = title,
+  year = year,
+  note = paste("R package version", meta$Version),
+  doi = doi,
   url = "https://jakubnowosad.com/rcartocolor/",
-  textVersion = "Nowosad, J. (2018). 'CARTOColors' Palettes. R package version 1.0.0. https://jakubnowosad.com/rcartocolor/"
+  textVersion = sprintf("Nowosad, J. (%s). %s (Version %s) [R package]. https://doi.org/%s",
+                        year, title, meta$Version, doi)
 )
