@@ -105,17 +105,18 @@ carto_pal_scale = function(type = "quantitative", palette = 1, direction = 1) {
         pal = carto_pal_name(palette, type)
 
         function(n) {
-                # If <3 colors are requested, brewer.pal will return a 3-color palette and
-                # give a warning. This warning isn't useful, so suppress it.
-                # If the palette has k colors and >k colors are requested, brewer.pal will
-                # return a k-color palette and give a warning. This warning is useful, so
-                # don't suppress it.
                 if (n < 3) {
+                        # Small scales can use the first colors of the smallest palette.
                         pal = suppressWarnings(carto_pal(n, pal))
                 } else {
+                        metadata = rcartocolor::metacartocolors
+                        max_n = metadata$Max_n[metadata$Name %in% pal & metadata$Type == "qualitative"]
+                        if (any(n > max_n)) {
+                                stop(sprintf("The %s palette supports at most %d colors, but %d are needed.",
+                                             pal, max_n, n), call. = FALSE)
+                        }
                         pal = carto_pal(n, pal)
                 }
-                # In both cases ensure we have n items
                 pal = pal[seq_len(n)]
 
                 if (direction == -1)
