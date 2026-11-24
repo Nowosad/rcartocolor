@@ -92,27 +92,24 @@
 <strong>ggplot2</strong><a class="anchor" aria-label="anchor" href="#ggplot2"></a>
 </h3>
 <p>The <strong>rcartocolor</strong> package contains four <strong>ggplot2</strong> color scales: two for continuous data - <code>scale_fill_carto_c</code>, <code>scale_color_carto_c</code> and two for discrete data - <code>scale_fill_carto_d</code>, <code>scale_color_carto_d</code>:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="fu">library</span>(sf)</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a><span class="sc">&lt;</span><span class="er">&lt;&lt;&lt;&lt;&lt;&lt;</span> HEAD</span>
-<span id="cb7-3"><a href="#cb7-3" tabindex="-1"></a><span class="co">#&gt; Linking to GEOS 3.14.1, GDAL 3.12.4, PROJ 9.8.1; sf_use_s2() is TRUE</span></span>
-<span id="cb7-4"><a href="#cb7-4" tabindex="-1"></a><span class="sc">==</span><span class="er">=====</span></span>
-<span id="cb7-5"><a href="#cb7-5" tabindex="-1"></a><span class="co">#&gt; Linking to GEOS 3.13.0, GDAL 3.10.3, PROJ 9.6.0; sf_use_s2() is TRUE</span></span>
-<span id="cb7-6"><a href="#cb7-6" tabindex="-1"></a><span class="er">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span> refs<span class="sc">/</span>remotes<span class="sc">/</span>origin<span class="sc">/</span>master</span>
-<span id="cb7-7"><a href="#cb7-7" tabindex="-1"></a><span class="fu">library</span>(spData)</span>
-<span id="cb7-8"><a href="#cb7-8" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb7-9"><a href="#cb7-9" tabindex="-1"></a><span class="fu">ggplot</span>(world, <span class="fu">aes</span>(<span class="at">fill =</span> lifeExp)) <span class="sc">+</span></span>
-<span id="cb7-10"><a href="#cb7-10" tabindex="-1"></a>        <span class="fu">geom_sf</span>(<span class="at">data =</span> world) <span class="sc">+</span></span>
-<span id="cb7-11"><a href="#cb7-11" tabindex="-1"></a>        <span class="fu">coord_sf</span>(<span class="at">crs =</span> <span class="st">"+proj=robin"</span>) <span class="sc">+</span></span>
-<span id="cb7-12"><a href="#cb7-12" tabindex="-1"></a>        <span class="fu">scale_fill_carto_c</span>(<span class="at">name =</span> <span class="st">"Life expectancy: "</span>,</span>
-<span id="cb7-13"><a href="#cb7-13" tabindex="-1"></a>                           <span class="at">type =</span> <span class="st">"diverging"</span>, <span class="at">palette =</span> <span class="st">"Earth"</span>, <span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb7-14"><a href="#cb7-14" tabindex="-1"></a>        <span class="fu">theme_void</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/" class="external-link">sf</a></span><span class="op">)</span></span>
+<span><span class="co">#&gt; Linking to GEOS 3.14.1, GDAL 3.12.4, PROJ 9.8.1; sf_use_s2() is TRUE</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://jakubnowosad.com/spData/" class="external-link">spData</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ggplot2.tidyverse.org" class="external-link">ggplot2</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">world</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">lifeExp</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">world</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">coord_sf</a></span><span class="op">(</span>crs <span class="op">=</span> <span class="st">"+proj=robin"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="reference/carto_scale.html">scale_fill_carto_c</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Life expectancy: "</span>,</span>
+<span>                           type <span class="op">=</span> <span class="st">"diverging"</span>, palette <span class="op">=</span> <span class="st">"Earth"</span>, direction <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-examplegg1-1.png"><!-- --></p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">ggplot</span><span class="op">(</span><span class="va">world</span>, <span class="fu">aes</span><span class="op">(</span>fill <span class="op">=</span> <span class="va">region_un</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>        <span class="fu">geom_sf</span><span class="op">(</span>data <span class="op">=</span> <span class="va">world</span><span class="op">)</span> <span class="op">+</span></span>
-<span>        <span class="fu">coord_sf</span><span class="op">(</span>crs <span class="op">=</span> <span class="st">"+proj=robin"</span><span class="op">)</span>  <span class="op">+</span></span>
+<code class="sourceCode R"><span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html" class="external-link">ggplot</a></span><span class="op">(</span><span class="va">world</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html" class="external-link">aes</a></span><span class="op">(</span>fill <span class="op">=</span> <span class="va">region_un</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">geom_sf</a></span><span class="op">(</span>data <span class="op">=</span> <span class="va">world</span><span class="op">)</span> <span class="op">+</span></span>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggsf.html" class="external-link">coord_sf</a></span><span class="op">(</span>crs <span class="op">=</span> <span class="st">"+proj=robin"</span><span class="op">)</span>  <span class="op">+</span></span>
 <span>        <span class="fu"><a href="reference/carto_scale.html">scale_fill_carto_d</a></span><span class="op">(</span>name <span class="op">=</span> <span class="st">"Region: "</span>, palette <span class="op">=</span> <span class="st">"Safe"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>        <span class="fu">theme_void</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<span>        <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html" class="external-link">theme_void</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="reference/figures/README-examplegg2-1.png"><!-- --></p>
 </div>
 </div>
