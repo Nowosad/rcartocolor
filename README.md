@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/Nowosad/rcartocolor/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/Nowosad/rcartocolor/actions/workflows/R-CMD-check.yaml)
-[![codecov](https://codecov.io/gh/Nowosad/rcartocolor/branch/master/graph/badge.svg?token=tkiSWsEUYy)](https://codecov.io/gh/Nowosad/rcartocolor)
+[![codecov](https://app.codecov.io/gh/Nowosad/rcartocolor/branch/master/graph/badge.svg?token=tkiSWsEUYy)](https://app.codecov.io/gh/Nowosad/rcartocolor)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
 [![CRAN RStudio mirror
 downloads](https://cranlogs.r-pkg.org/badges/rcartocolor)](https://cran.r-project.org/package=rcartocolor)
@@ -74,9 +74,8 @@ for continuous data - `scale_fill_carto_c`, `scale_color_carto_c` and
 two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:
 
 ``` r
-# devtools::install_github("tidyverse/ggplot2")
 library(sf)
-#> Linking to GEOS 3.12.2, GDAL 3.8.5, PROJ 9.3.1; sf_use_s2() is TRUE
+#> Linking to GEOS 3.14.1, GDAL 3.12.4, PROJ 9.8.1; sf_use_s2() is TRUE
 library(spData)
 library(ggplot2)
 ggplot(world, aes(fill = lifeExp)) +
