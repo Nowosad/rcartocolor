@@ -13,6 +13,7 @@
 #' @export
 display_carto_pal = function(n = NULL, name){
         selected_colors = carto_pal(n, name)
+        n = length(selected_colors)
         selected_type = rcartocolor::cartocolors[rcartocolor::cartocolors$Name == name, "Type"][[1]]
         image(1:n, 1, as.matrix(1:n), col = selected_colors,
               main = paste0(name, ": ", selected_type, " (", n ,")"),
