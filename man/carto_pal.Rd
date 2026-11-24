@@ -11,7 +11,7 @@ carto_pal(n = NULL, name, ...)
 
 \item{name}{A palette name}
 
-\item{...}{Additional arguments for \link[grDevices:colorRamp]{grDevices::colorRampPalette}}
+\item{...}{Additional arguments for \link[grDevices:colorRampPalette]{grDevices::colorRampPalette}}
 }
 \value{
 A character vector

@@ -9,11 +9,15 @@ export(scale_colour_carto_c)
 export(scale_colour_carto_d)
 export(scale_fill_carto_c)
 export(scale_fill_carto_d)
-importFrom(ggplot2,continuous_scale)
-importFrom(ggplot2,discrete_scale)
-importFrom(graphics,image)
-importFrom(graphics,par)
-importFrom(graphics,plot)
-importFrom(graphics,rect)
-importFrom(graphics,text)
+importFrom(ggplot2,
+  continuous_scale,
+  discrete_scale
+)
+importFrom(graphics,
+  image,
+  par,
+  plot,
+  rect,
+  text
+)
 importFrom(scales,gradient_n_pal)
