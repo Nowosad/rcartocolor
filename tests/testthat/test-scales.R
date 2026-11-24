@@ -19,6 +19,17 @@ test_that("scales work correctly", {
 
 })
 
+test_that("qualitative scales reject more categories than colors", {
+        data = data.frame(category = factor(seq_len(13)))
+        plot = ggplot2::ggplot(data, ggplot2::aes(category, fill = category)) +
+                ggplot2::geom_bar()
+
+        for (direction in c(1, -1)) {
+                scale = scale_fill_carto_d(palette = "Safe", direction = direction)
+                expect_error(ggplot2::ggplot_build(plot + scale), "Safe.*12 colors.*13")
+        }
+})
+
 context("colorandfill_c")
 test_that("visual elements are correct", {
 

@@ -1,6 +1,7 @@
 context("display_pal")
 test_that("palette display", {
 
+        expect_silent(display_carto_pal(name = "Burg"))
         expect_silent(display_carto_all(n = NULL))
         expect_silent(display_carto_all(type = "diverging"))
         expect_silent(display_carto_all(type = c("diverging", "aggregation")))
@@ -43,6 +44,14 @@ test_that("palette display", {
         expect_warning(display_carto_all(n = 77))
         expect_warning(display_carto_all(n = 1))
 
+})
+
+test_that("palette display uses the returned color count", {
+        display_carto_all(12, type = "qualitative")
+        limits = graphics::par("usr")
+
+        expect_warning(display_carto_all(14, type = "qualitative"))
+        expect_equal(graphics::par("usr"), limits)
 })
 
 context("display_carto_all")
