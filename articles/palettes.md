@@ -86,4 +86,4 @@ Use
 [`display_carto_all()`](https://jakubnowosad.com/rcartocolor/reference/display_carto_all.md)
 to see every palette or `display_carto_all(colorblind_friendly = TRUE)`
 to filter to palettes flagged as
-(colorblind-friendly)(<https://jakubnowosad.com/colorblindcheck/articles/check_rcartocolor.html>).
+[colorblind-friendly](https://jakubnowosad.com/colorblindcheck/articles/check_rcartocolor.html).
