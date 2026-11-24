@@ -79,7 +79,11 @@ two for discrete data - `scale_fill_carto_d`, `scale_color_carto_d`:
 
 ``` r
 library(sf)
+<<<<<<< HEAD
 #> Linking to GEOS 3.14.1, GDAL 3.12.4, PROJ 9.8.1; sf_use_s2() is TRUE
+=======
+#> Linking to GEOS 3.13.0, GDAL 3.10.3, PROJ 9.6.0; sf_use_s2() is TRUE
+>>>>>>> refs/remotes/origin/master
 library(spData)
 library(ggplot2)
 ggplot(world, aes(fill = lifeExp)) +
