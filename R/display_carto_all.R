@@ -42,17 +42,21 @@ display_carto_all = function(n = NULL, type = "all", colorblind_friendly = NULL)
         }
 
         selected_colors = vector("list", n_colors)
+        for(i in seq_len(n_colors)){
+                selected_colors[[i]] = carto_pal(n = my_n[i], name = selected_metadata$Name[i])
+        }
+        n_swatches = lengths(selected_colors)
 
         ylim = c(0, n_colors)
         oldpar = par(mgp = c(2, 0.25, 0))
         on.exit(par(oldpar))
-        plot(1, 1, xlim = c(0, max(my_n)), ylim = ylim,
+        plot(1, 1, xlim = c(0, max(n_swatches)), ylim = ylim,
              type = "n", axes = FALSE, bty = "n", xlab = "", ylab = "")
 
         for(i in seq_len(n_colors)){
-                one_color = carto_pal(n = my_n[i], name = selected_metadata$Name[i])
-                rect(xleft = 0:(my_n[i] - 1), ybottom = i - 1, xright = 1:my_n[i], ytop = i-0.2, col = one_color,
-                     border = "light grey")
+                swatches = seq_len(n_swatches[i])
+                rect(xleft = swatches - 1, ybottom = i - 1, xright = swatches,
+                     ytop = i - 0.2, col = selected_colors[[i]], border = "light grey")
         }
         text(rep(-0.1, n_colors), (1: n_colors) - 0.6, labels = selected_metadata$Name, xpd = TRUE, adj = 1)
 }
