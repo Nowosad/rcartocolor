@@ -26,7 +26,7 @@ for (type in c("Quantitative", "Diverging", "Qualitative", "Aggregation")) {
       paste0(
         '<p class="d-flex flex-wrap align-items-center gap-2 mb-2">',
         '<strong style="width:6rem">%s</strong> ',
-        '<span style="width:5rem">%s–%s colors</span>%s</p>\n'
+        '<span style="width:10rem">%s–%s colors</span>%s</p>\n'
       ),
       palettes$Name[i], palettes$Min_n[i], palettes$Max_n[i], swatches
     ))
@@ -36,4 +36,4 @@ for (type in c("Quantitative", "Diverging", "Qualitative", "Aggregation")) {
 
 ## Preview palettes in R
 
-Use `display_carto_all()` to see every palette or `display_carto_all(colorblind_friendly = TRUE)` to filter to palettes flagged as (colorblind-friendly)(https://jakubnowosad.com/colorblindcheck/articles/check_rcartocolor.html).
+Use `display_carto_all()` to see every palette or `display_carto_all(colorblind_friendly = TRUE)` to filter to palettes flagged as [colorblind-friendly](https://jakubnowosad.com/colorblindcheck/articles/check_rcartocolor.html).
