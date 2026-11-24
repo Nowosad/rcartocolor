@@ -28,25 +28,17 @@ carto_pal = function(n = NULL, name, ...){
         type = selected_metadata$Type
         if(is.null(n)){
                 n = max_n
+        } else if (!is.numeric(n) || length(n) != 1L || !is.finite(n) || n != floor(n)) {
+                stop("n must be a single finite whole number or NULL.", call. = FALSE)
         }
-        proper_n = n
-        if(proper_n > max_n){
-                proper_n = max_n
-        }
-        if(!(n %in% min_n:max_n) && type == "qualitative"){
+        if (n < min_n || (type == "qualitative" && n > max_n)) {
                 warning(paste("Number of colors (n) in the", name,
                            "palette should be between", min_n, "and", max_n, "\n"), call. = FALSE)
-                n = proper_n
+                n = max(min_n, min(n, max_n))
         }
-        if(!(n >= min_n)){
-                warning(paste("Number of colors (n) in the", name,
-                              "palette should be between", min_n, "and", max_n, "\n"), call. = FALSE)
-                proper_n = min_n
-                n = min_n
-        }
-        coln = paste0("n", proper_n)
+        coln = paste0("n", min(n, max_n))
         colors = rcartocolor::cartocolors[rcartocolor::cartocolors$Name == name, coln][[1]]
-        if (n > 2){
+        if (n > 2 || length(list(...)) > 0L) {
                 colors = grDevices::colorRampPalette(colors, ...)(n = n)
         }
         return(colors)
