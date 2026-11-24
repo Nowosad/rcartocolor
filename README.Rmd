@@ -55,6 +55,9 @@ my_colors = carto_pal(7, "Burg")
 my_colors
 ```
 
+[Browse all 34 palettes](https://jakubnowosad.com/rcartocolor/articles/palettes.html)
+to compare swatches and available sizes by palette type.
+
 Display all of the CARTOcolor palettes:
 
 ```{r example3, fig.height=7, fig.width=6}

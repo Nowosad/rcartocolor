@@ -26,6 +26,7 @@ jobs:
           extra-packages: |
              any::rcmdcheck
              any::pkgdown
+          install-pandoc: 'true'
           needs: check
 
       - uses: r-lib/actions/check-r-package@v2
