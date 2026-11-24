@@ -41,9 +41,17 @@ test_that("visual elements are correct", {
 
         data("geyser", package="MASS")
 
+        # Vector color bars keep snapshots independent of PNG compression.
+        colourbar = if ("display" %in% names(formals(guide_colourbar))) {
+                guide_colourbar(display = "rectangles", nbin = 24)
+        } else {
+                guide_colourbar(raster = FALSE, nbin = 24)
+        }
+
         gg = ggplot(geyser, aes(x = duration, y = waiting)) +
                 xlim(0.5, 6) + ylim(40, 110) +
                 stat_density2d(aes(fill = after_stat(level)), geom = "polygon") +
+                guides(fill = colourbar) +
                 theme_bw() +
                 theme(panel.grid = element_blank())
 
