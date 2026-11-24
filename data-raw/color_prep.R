@@ -1,4 +1,4 @@
-# https://github.com/CartoDB/CartoColor/blob/master/cartocolor.js
+# https://github.com/CartoDB/CartoColor/blob/5302a3d7245595251ea5dd90fc09efcb8d3254fb/cartocolor.js
 
 library(jsonlite)
 library(tidyverse)
