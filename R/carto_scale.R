@@ -12,6 +12,9 @@
 #' @param ... Other arguments passed on to [ggplot2::discrete_scale()] or
 #' [ggplot2::continuous_scale()] to control name, limits, breaks, labels and so forth
 #'
+#' @details Discrete scales raise an error if a qualitative palette has fewer
+#'   colors than the scale has categories. See `Max_n` in [metacartocolors].
+#'
 #' @importFrom ggplot2 discrete_scale continuous_scale
 #' @importFrom scales gradient_n_pal
 #'

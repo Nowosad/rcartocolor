@@ -7,7 +7,8 @@
 display_carto_pal(n = NULL, name)
 }
 \arguments{
-\item{n}{Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)}
+\item{n}{Number of colors to request. \code{NULL} uses the largest stored size.
+See \code{\link[=carto_pal]{carto_pal()}} for size limits.}
 
 \item{name}{A palette name}
 }

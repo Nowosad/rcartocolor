@@ -2,7 +2,8 @@
 #'
 #' Displays a set of the color palettes from CARTOcolor
 #'
-#' @param n Number of different colors in the palette, minimum depending on the palette (2 or 3), maximum depending on the palette (7 or 11)
+#' @param n Number of colors to request. `NULL` uses the largest stored size for
+#'   each palette. See [carto_pal()] for size limits.
 #' @param type Type of the palette, can be "quantitative", "diverging", "qualitative", "aggregation", or "all"
 #' @param colorblind_friendly if TRUE, display only colorblind friendly palettes
 #'

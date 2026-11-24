@@ -7,7 +7,8 @@
 display_carto_all(n = NULL, type = "all", colorblind_friendly = NULL)
 }
 \arguments{
-\item{n}{Number of different colors in the palette, minimum depending on the palette (2 or 3), maximum depending on the palette (7 or 11)}
+\item{n}{Number of colors to request. \code{NULL} uses the largest stored size for
+each palette. See \code{\link[=carto_pal]{carto_pal()}} for size limits.}
 
 \item{type}{Type of the palette, can be "quantitative", "diverging", "qualitative", "aggregation", or "all"}
 

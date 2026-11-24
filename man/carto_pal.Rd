@@ -7,7 +7,11 @@
 carto_pal(n = NULL, name, ...)
 }
 \arguments{
-\item{n}{Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)}
+\item{n}{Number of colors to request as a single finite whole number.
+\code{NULL} uses the largest stored size. Requests below the minimum or above
+the qualitative maximum (12) use the nearest stored size and warn. Other
+palettes interpolate above their stored maximum (7). See \link{metacartocolors}
+for each palette's stored sizes.}
 
 \item{name}{A palette name}
 

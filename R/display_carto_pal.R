@@ -2,7 +2,8 @@
 #'
 #' Displays a color palette from CARTOcolor
 #'
-#' @param n Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)
+#' @param n Number of colors to request. `NULL` uses the largest stored size.
+#'   See [carto_pal()] for size limits.
 #' @param name A palette name
 #'
 #' @importFrom graphics image

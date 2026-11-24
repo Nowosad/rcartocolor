@@ -81,6 +81,10 @@ order of colors is reversed}
 \description{
 CARTO color scales
 }
+\details{
+Discrete scales raise an error if a qualitative palette has fewer
+colors than the scale has categories. See \code{Max_n} in \link{metacartocolors}.
+}
 \examples{
 library(ggplot2)
 

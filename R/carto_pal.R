@@ -2,7 +2,11 @@
 #'
 #' Creates a color palette from CARTOcolor
 #'
-#' @param n Number of different colors in the palette, minimum depending on palette (2 or 3), maximum depending on palette (7 or 11)
+#' @param n Number of colors to request as a single finite whole number.
+#'   `NULL` uses the largest stored size. Requests below the minimum or above
+#'   the qualitative maximum (12) use the nearest stored size and warn. Other
+#'   palettes interpolate above their stored maximum (7). See [metacartocolors]
+#'   for each palette's stored sizes.
 #' @param name A palette name
 #' @param ... Additional arguments for [grDevices::colorRampPalette]
 #'
